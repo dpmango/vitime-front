@@ -1,0 +1,388 @@
+$border: #c6c6c6;
+$border-focus: #8998a8;
+$blue: #1d2142;
+$aqua: #07B3A1;
+$asphalt: #506982;
+
+.wr-form-ct, form {
+
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 0 20px;
+  }
+  @include breakpoint($large) {
+    padding: 0 10%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.controls {
+  text-align: left;
+  position: relative;
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  button,
+  select {
+    padding: 12px;
+    border: 1px solid $border;
+    width: 100%;
+    color: $color-txt;
+    font-size: 1em;
+    // background-color: #fff;
+    background: transparent;
+    outline: none;
+    @include border-radius(2px);
+    -moz-osx-font-smoothing: grayscale;
+    z-index: 1;
+    @extend .transition-all;
+    @extend .MyriadPro-Regular;
+
+    &:focus, &:hover {
+      outline: none;
+      border-color: $border-focus;
+      + label {
+        color: $blue;
+        cursor: text;
+      }
+    }
+  }
+  .fa-sort {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+    width: 12px;
+    height: 13px;
+    z-index: -1;
+    background: url("/img/svg-min/fa-sort.svg") no-repeat center;
+  }
+  select {
+    @include appearance(none);
+    cursor: pointer;
+  }
+  label {
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    color: lighten($color-txt, 10%);
+    // text-transform: uppercase;
+    font-size: 0.9em;
+    display: inline-block;
+    padding: 4px 10px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0);
+    pointer-events: none;
+    @include transition(color .3s, top .3s, background-color .8s);
+    @extend .MyriadPro-Regular;
+    &.active {
+      top: -11px;
+      color: lighten($color-txt, 5%);
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+  textarea {
+    resize: none;
+    height: 150px;
+  }
+  /*  button{
+      cursor: pointer;
+      background-color: $aqua;
+      border: none;
+      color: #fff;
+      padding: 12px 0;
+      &:hover{
+        background-color: lighten($aqua, 5%);
+      }
+    }*/
+}
+
+.controls p {
+  margin: 0;
+  line-height: 1;
+}
+
+.controls option {
+  color: $color-txt;
+  // padding: 5px 10px;
+  @extend .MyriadPro-Regular;
+}
+
+.controls select option:first-child {
+  // padding: 0;
+}
+
+/***********************************************
+BTN
+***********************************************/
+.btn-contact {
+  display: inline-block;
+  width: 170px;
+  height: 45px;
+  // border: 1px solid #494c6c;
+  border: none;
+  border-image: none;
+  border-radius: 24px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  background: #494c6c;
+  @extend .Roboto_Medium;
+  @extend .transition-all;
+}
+
+.btn-contact:hover {
+  background: darken(#494c6c, 10%);
+  // border-color: darken(#494c6c,10%);
+}
+
+/***********************************************
+Error
+***********************************************/
+.help-block-error {
+  position: absolute;
+  // text-transform: uppercase;
+  font-size: 0.9em;
+  color: #c96565;
+  top: -5px;
+  right: 10px;
+  background: #fff;
+  padding: 0 10px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    right: 15px;
+  }
+  @include breakpoint($medium) {
+    right: 20px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.has-error .controls input, .has-error .controls textarea, .has-error .controls select {
+  border-color: #c96565;
+}
+
+/***********************************************
+Send Email
+***********************************************/
+#response-wr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  text-align: center;
+  z-index: 150;
+  overflow: hidden;
+  @extend .transition-all;
+}
+
+#response-wr.error-sent {
+  background: rgba(201, 73, 81, 0.92);
+  height: 150px;
+}
+
+#response-wr.success-sent {
+  background: rgba(80, 128, 94, 0.95);
+  height: 150px;
+}
+
+#response-wr p {
+  // text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.1em;
+  color: #fff;
+  padding: 15px 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  // background: rgba(201, 73, 81, 0.92);
+  @extend .Roboto_Medium;
+  @extend .vertical-center;
+}
+
+/***********************************************
+Verify Code
+***********************************************/
+.cap-mod {
+  display: inline-block;
+  width: 30%;
+  height: 48px;
+  overflow: hidden;
+  background: #F3F3F3;
+  float: left;
+}
+
+.cap-mod img {
+  max-height: 90%;
+  width: auto;
+}
+
+.reset-cap {
+  overflow: hidden;
+  display: inline-block;
+  padding: 1%;
+  float: left;
+  height: 50px;
+  width: 16%;
+}
+
+.img-cap {
+  background-image: url("/img/svg-min/reset-cap.svg");
+  cursor: pointer;
+  @extend .bg-contain;
+  @extend .w-h-100;
+}
+
+#contactform-verifycode {
+  display: inline-block;
+  width: 54%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.wr-bt-cap {
+  // display: inline-block;
+  //float: left;
+  // padding-right: 20px;
+}
+
+/*.n-cap-in{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: .9em;
+}*/
+.field-contactform-verifycode .controls {
+  //overflow-x: hidden;
+  padding-bottom: 15px;
+}
+
+/***********************************************
+Grid
+***********************************************/
+
+.cnc-1 {
+
+  @include grid-span(12, 1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    @include grid-span(5, 1);
+    //padding-top: 30px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.cnc-2 {
+  @include grid-span(12, 1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    @include grid-span(7, 6);
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Adres
+***********************************************/
+.ad-con {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+
+.ad-con::after {
+  background: #dcdcdc;
+  width: 100px;
+  @extend .after-ab-100-1;
+}
+
+.ad-con li {
+  color: $color-txt;
+  font-size: 1em;
+  margin-bottom: 5px;
+  -moz-osx-font-smoothing: grayscale;
+  @extend .MyriadPro-Regular;
+}
+
+.ad-con li.n-firm {
+  color: $color-h;
+  font-size: 1.2em;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  @extend .Roboto_Medium;
+}
+
+.ad-con li.n-firm::after {
+  background: #dcdcdc;
+  width: 100px;
+  @extend .after-ab-100-1;
+}
+
+.ad-con li.ph-hel {
+  color: $color-h;
+  font-size: 1.2em;
+  @extend .Roboto_Medium;
+}
+
+.ad-con li.map-ad {
+  margin-top: 15px;
+}
+
+.ad-con li.tim-ad {
+  padding-bottom: 15px;
+}
+
+.ad-con li.tim-ad::after {
+  background: #dcdcdc;
+  width: 100px;
+  @extend .after-ab-100-1;
+}
+
+.ad-con li.ph-f-b {
+  color: $color-h;
+  margin-top: 10px;
+  font-size: 1em;
+  @extend .Roboto_Medium;
+}
+
+.con-p-f {
+  padding-right: 50px;
+}

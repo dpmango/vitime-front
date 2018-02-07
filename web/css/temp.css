@@ -1,0 +1,9 @@
+.item-art {
+    float: left;
+    width: calc(33% - 40px);
+    margin: 20px;
+}
+
+.txt-ar h3 {
+    display: block;
+}

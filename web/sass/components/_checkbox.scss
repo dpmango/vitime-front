@@ -1,0 +1,276 @@
+@charset "UTF-8";
+/***********************************************
+checkbox
+***********************************************/
+$bg-check-b: #3c3e58;
+/*#filter-questions div, #filter-questions {
+  display: inline-block;
+  position: relative;
+}*/
+/*#filter-questions div{
+  float: left;
+}*/
+#filter-questions {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding: 0 0 0 30px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-que-fil-ls {
+  display: inline-block;
+  text-align: left;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    text-align: center;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-que-fil-ls div {
+  position: relative;
+  display: inline-block;
+  //float: left;
+  padding: 0;
+  height: 24px;
+  line-height: 24px;
+  margin-bottom: 10px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    padding: 0 10px;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#filter-questions [type="checkbox"]:not(:checked),
+#filter-questions [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+#filter-questions [type="checkbox"]:not(:checked) + label,
+#filter-questions [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-left: 28px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/* checkbox aspect */
+
+#filter-questions [type="checkbox"] + label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  border: 1px solid;
+  background: darken(#fff, 0.3%);
+  border-radius: 1px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#filter-questions [type="checkbox"]:not(:checked) + label::before {
+  border-color: darken(#fff, 20%);
+}
+
+/* checked mark aspect */
+#filter-questions [type="checkbox"]:not(:checked) + label:after,
+#filter-questions [type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: -1px;
+  left: 4px;
+  font-size: 19px;
+  line-height: 1;
+  color: $bg-check-b;
+  outline: none;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/* checked mark aspect changes */
+#filter-questions [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  @include scale(0);
+}
+
+#filter-questions [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  @include scale(1);
+}
+
+//#filter-questions [type="checkbox"]:not(:checked):focus + label:before
+#filter-questions [type="checkbox"]:checked:focus + label:before, #filter-questions [type="checkbox"]:hover + label:before {
+  border-color: $bg-check-b;
+}
+
+/* hover style just for information */
+/*#filter-questions label:hover::before {
+  border-color: $bg-check-b;
+}*/
+
+#filter-questions label {
+  position: relative;
+  color: $color-txt;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  -moz-osx-font-smoothing: grayscale;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: 0.85em;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+
+}
+
+/***********************************************
+Grid
+***********************************************/
+
+.chec-l {
+  @include grid-span(12, 1);
+  margin-bottom: 20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    @include grid-span(3, 1);
+    margin-bottom: 0;
+  }
+  @include breakpoint($medium) {
+    @include grid-span(2, 1);
+  }
+  @include breakpoint($large) {
+    @include grid-span(1, 1);
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.chec-r {
+  @include grid-span(12, 1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    @include grid-span(9, 4);
+  }
+  @include breakpoint($medium) {
+    @include grid-span(10, 3);
+  }
+  @include breakpoint($large) {
+    @include grid-span(11, 2);
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+TXT
+***********************************************/
+.chec-l p {
+  color: $color-h;
+  font-size: 1em;
+  margin-bottom: 0;
+  padding-right: 28px;
+  text-transform: uppercase;
+
+}
+
+.chec-l p::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  background-image: url("/img/svg-min/filter-ic.svg");
+}

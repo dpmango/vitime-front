@@ -1,0 +1,30 @@
+.hd-contact {
+  background-image: url("/img/contact/header.jpg");
+  @extend .bg-cover;
+}
+/*.num-ct{
+  background-image: url("/img/svg-min/contact-bg.svg");
+  @extend .bg-contain;
+}*/
+.span-in span{
+  display: inline;
+}
+
+/***********************************************
+Map
+***********************************************/
+#contact-map {
+  height: 300px;
+  @include breakpoint($small) {
+    height: 350px;
+  }
+  @include breakpoint($medium) {
+    height: 450px;
+  }
+  @include breakpoint($large) {
+    height: 500px;
+  }
+  @include breakpoint($large-xl) {
+    height: 550px;
+  }
+}

@@ -1,0 +1,1613 @@
+@charset "UTF-8";
+/***********************************************
+Main
+***********************************************/
+.media {
+  font-size: 10px;
+  @include breakpoint($small-min-sl) {
+    font-size: 18px;
+  }
+  @include breakpoint($small-min) {
+    font-size: 20px;
+  }
+  @include breakpoint($small) {
+    font-size: 30px;
+  }
+  @include breakpoint($medium) {
+    font-size: 40px;
+  }
+  @include breakpoint($large) {
+    font-size: 50px;
+  }
+  @include breakpoint($large-xl) {
+    font-size: 60px;
+  }
+}
+
+$bg-fon-sec: #fcfcfc;
+.tlt-result-menu {
+  color: #444248;
+  display: inline-block;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+  margin-top: 40px;
+  font-family: 'Roboto Medium', sans-serif;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    margin-top: 50px;
+  }
+  @include breakpoint($medium) {
+    margin-top: 60px;
+    font-size: 1.3em;
+  }
+  @include breakpoint($large) {
+    margin-top: 80px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bg-calc {
+  // background: #f7f7f7;
+  background: $bg-fon-sec;
+}
+
+.hd-calc {
+  background-image: url("/img/calculation/header2.jpg");
+}
+
+.num-calc {
+  background-image: url("/img/calculation/img-calc.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+
+.num-art.num-art-op.num-calc {
+  opacity: .1;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    opacity: .2;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.name-group {
+  font-size: 0.95em;
+  line-height: 1;
+  font-family: 'Roboto Medium', sans-serif;
+  color: #32343d;
+  margin-bottom: 20px;
+  @include breakpoint($small-min) {
+    font-size: 1em;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-bottom: 25px;
+    font-size: 1.05em;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.name-group.fig-tlt {
+  margin-bottom: 35px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    //margin-bottom: 25px;
+  }
+  @include breakpoint($large) {
+    margin-bottom: 25px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.name-group span {
+  margin-right: 3px;
+}
+
+.name-group.ls-bl {
+  margin-top: 25px;
+}
+
+.name-group.ls-bl-sm {
+  margin-top: 15px;
+  @include breakpoint($small-min) {
+    margin-top: 20px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-top: 25px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#calculator-form {
+  padding: 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding: 0 5%;
+  }
+  @include breakpoint($large-xl) {
+    padding: 0 10%;
+  }
+}
+
+/***********************************************
+Steps
+***********************************************/
+$bg-steps: #474b6d;
+.wizard,
+.tabcontrol {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wizard a,
+.tabcontrol a {
+  outline: 0;
+}
+
+.wizard ul,
+.tabcontrol ul {
+  padding: 0;
+  margin: 0;
+}
+
+.wizard ul > li,
+.tabcontrol ul > li {
+  display: block;
+  padding: 0;
+}
+
+/* Accessibility */
+.wizard > .steps .current-info,
+.tabcontrol > .steps .current-info {
+  position: absolute;
+  left: -999em;
+}
+
+.wizard > .content > .title,
+.tabcontrol > .content > .title {
+  position: absolute;
+  left: -999em;
+}
+
+/*
+    Wizard
+*/
+
+.wizard > .steps {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.wizard.vertical > .steps {
+  display: inline;
+  float: left;
+  width: 30%;
+}
+
+.wizard > .steps .number {
+  font-size: 1.2em;
+  margin-right: 3px;
+}
+
+.wizard > .steps > ul > li {
+  width: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 33.333%;
+  }
+  @include breakpoint($large) {
+    width: 25%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wizard > .steps > ul > li,
+.wizard > .actions > ul > li {
+  float: left;
+}
+
+.wizard.vertical > .steps > ul > li {
+  float: none;
+  width: 100%;
+}
+
+.wizard > .steps a,
+.wizard > .steps a:hover,
+.wizard > .steps a:active {
+  display: block;
+  width: auto;
+  margin: 0 0 0.5em;
+  padding: 17px 20px 15px 20px;
+  text-decoration: none;
+  border-radius: 2px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin: 0 0.5em 0.5em;
+    padding: 17px 20px 15px 35px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wizard > .steps .disabled a,
+.wizard > .steps .disabled a:hover,
+.wizard > .steps .disabled a:active {
+  background: darken(#ebebeb, 2%);
+  border: 1px solid darken(#ebebeb, 3%);
+  color: #828282;
+  cursor: default;
+  font-family: "MyriadPro-Regular", sans-serif;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+.wizard > .steps .current a {
+  font-family: "MyriadPro-Regular", sans-serif;
+  text-transform: uppercase;
+  font-size: .8em;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+}
+
+.wizard > .steps .current a,
+.wizard > .steps .current a:hover,
+.wizard > .steps .current a:active {
+  background: $bg-steps;
+  border: 1px solid $bg-steps;
+  color: #fff;
+  cursor: default;
+  font-family: "MyriadPro-Regular", sans-serif;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+.wizard > .steps .done a,
+.wizard > .steps .done a:hover,
+.wizard > .steps .done a:active {
+  // background: lighten($bg-steps,15%);
+  background: #6C80A9;
+  border: 1px solid #6C80A9;
+  color: #fff;
+  font-family: "MyriadPro-Regular", sans-serif;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+.wizard > .steps .error a,
+.wizard > .steps .error a:hover,
+.wizard > .steps .error a:active {
+  background: #ff3111;
+  color: #fff;
+}
+
+$bg-fon: #f5f5f5;
+.wizard > .content {
+  background: darken($bg-fon, 3%);
+  border: 1px solid darken($bg-fon, 5%);
+  display: block;
+  min-height: 28em;
+ // overflow: hidden;
+  position: relative;
+  width: auto;
+  border-radius: 2px;
+  @include box-shadow-2(0 2px 3px 0 rgba(0, 0, 0, 0.14), 0 2px 6px 0 rgba(0, 0, 0, 0.10));
+  @include breakpoint($small-min) {
+    min-height: 29em;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin: 0.5em;
+    background: $bg-fon;
+    border: 1px solid darken($bg-fon, 2%);
+    min-height: 32em;
+  }
+  @include breakpoint($large) {
+    min-height: 33em;
+  }
+  @include breakpoint($large-xl) {
+    min-height: 33.5em;
+  }
+}
+
+/***********************************************
+Num End Line
+***********************************************/
+$bg-chek: #009688;
+#num_form {
+  position: absolute;
+  bottom: 25px;
+  width: 90%;
+  left: 5%;
+  border-top: 1px solid #c7c7c7;
+  font-family: "MyriadPro-Regular", sans-serif;
+  font-size: 1.4em;
+  padding-top: 25px;
+  color: #797979;
+  text-align: right;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    bottom: 50px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wizard > .content::after {
+  content: '';
+  position: absolute;
+  width: 33.333%;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  background: $bg-chek;
+  @include transition(width 0.55s ease-in);
+}
+
+.wizard > .content.step2::after {
+  width: 66.666%;
+}
+
+.wizard > .content.step3::after {
+  width: 100%;
+}
+
+.wizard > .content::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  background: rgba(75, 146, 150, 0.36);
+}
+
+.wizard.vertical > .content {
+  display: inline;
+  float: left;
+  margin: 0 2.5% 0.5em 2.5%;
+  width: 65%;
+}
+
+.wizard > .content > .body {
+  float: left;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 25px 20px 30px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 40px 30px 35px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wizard > .content > .body ul {
+  list-style: disc;
+}
+
+.wizard > .content > .body ul > li {
+  display: list-item;
+}
+
+.wizard > .content > .body > iframe {
+  border: 0 none;
+  width: 100%;
+  height: 100%;
+}
+
+/*.wizard > .content > .body input {
+  display: block;
+  border: 1px solid #ccc;
+}*/
+
+/*.wizard > .content > .body input[type="checkbox"] {
+  display: inline-block;
+}*/
+
+.wizard > .content > .body input.error {
+  background: rgb(251, 227, 228);
+  border: 1px solid #fbc2c4;
+  color: #8a1f11;
+}
+
+/*.wizard > .content > .body label {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}*/
+
+.wizard > .content > .body label.error {
+  color: #8a1f11;
+  display: inline-block;
+  margin-left: 1.5em;
+}
+
+#example-form {
+  // padding-bottom: 50px;
+}
+
+.wizard > .actions {
+  position: relative;
+  display: block;
+  margin-top: 15px;
+  text-align: right;
+  width: 100%;
+  /*  position: absolute;
+    bottom: 50px;
+    width: 100%;
+    left: 0;*/
+}
+
+.wizard.vertical > .actions {
+  display: inline;
+  float: right;
+  margin: 0 2.5%;
+  width: 95%;
+}
+
+.wizard > .actions > ul {
+  display: inline-block;
+  width: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: auto;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wizard > .actions > ul > li {
+  margin: 0 0 0.5em;
+  width: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin: 0 0.5em;
+    width: auto;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wizard.vertical > .actions > ul > li {
+  margin: 0 0 0 1em;
+}
+
+.wizard > .actions a,
+.wizard > .actions a:hover,
+.wizard > .actions a:active {
+  background: $bg-steps;
+  color: #fff;
+  display: block;
+  padding: 16px 25px 14px;
+  text-decoration: none;
+  border-radius: 2px;
+  line-height: 1;
+  margin-bottom: 0;
+  font-family: MyriadPro-Regular, sans-serif;
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.wizard > .actions .disabled a,
+.wizard > .actions .disabled a:hover,
+.wizard > .actions .disabled a:active {
+  background: #e1e1e1;
+  color: #828282;
+}
+
+.wizard > .loading {
+}
+
+.wizard > .loading .spinner {
+}
+
+/*
+    Tabcontrol
+*/
+
+.tabcontrol > .steps {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.tabcontrol > .steps > ul {
+  position: relative;
+  margin: 6px 0 0 0;
+  top: 1px;
+  z-index: 1;
+}
+
+.tabcontrol > .steps > ul > li {
+  float: left;
+  margin: 5px 2px 0 0;
+  padding: 1px;
+
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.tabcontrol > .steps > ul > li:hover {
+  background: #edecec;
+  border: 1px solid #bbb;
+  padding: 0;
+}
+
+.tabcontrol > .steps > ul > li.current {
+  background: #fff;
+  border: 1px solid #bbb;
+  border-bottom: 0 none;
+  padding: 0 0 1px 0;
+  margin-top: 0;
+}
+
+.tabcontrol > .steps > ul > li > a {
+  color: #5f5f5f;
+  display: inline-block;
+  border: 0 none;
+  margin: 0;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+.tabcontrol > .steps > ul > li > a:hover {
+  text-decoration: none;
+}
+
+.tabcontrol > .steps > ul > li.current > a {
+  padding: 15px 30px 10px 30px;
+}
+
+.tabcontrol > .content {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 36em;
+  overflow: hidden;
+  border-top: 1px solid #bbb;
+  padding-top: 20px;
+}
+
+.tabcontrol > .content > .body {
+  float: left;
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  padding: 2.5%;
+}
+
+.tabcontrol > .content > .body ul {
+  list-style: disc !important;
+}
+
+.tabcontrol > .content > .body ul > li {
+  display: list-item;
+}
+
+#calculatorform-metabolism {
+  margin: 0 -20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Form
+***********************************************/
+#calculation_form .group-calc {
+  position: relative;
+  margin-bottom: 15px;
+  //margin-left: 30px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-left: 30px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+
+}
+
+#calculation_form input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+}
+
+#calculation_form .form-group {
+  margin-bottom: 15px;
+}
+
+.field-calculatorform-weight, .field-calculatorform-height, .field-calculatorform-age {
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-left: 30px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.field-calculatorform-weight input, .field-calculatorform-height input, .field-calculatorform-age input {
+  width: 150px;
+  padding: 7px 10px;
+  border: 1px solid #c3c3c3;
+  border-radius: 2px;
+  background: #fcfcfc;
+  @include transition(all 0.3s);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 200px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#calculation_form input[type=text] {
+  font-size: 1.1em;
+  color: #444248;
+  font-family: "MyriadPro-Regular", sans-serif;
+}
+
+#calculation_form input[type=text]:hover,
+#calculation_form input[type=text]:before,
+#calculation_form input[type=text]:active {
+  // border: 1px solid #6a6f7a;
+  border: 1px solid $bg-chek;
+}
+
+#calculation_form label.label-input {
+  padding-left: 15px;
+}
+
+#calculation_form .form-group:hover > label {
+  color: #32343d;
+}
+
+#calculation_form label {
+  display: inline-block;
+  position: relative;
+  font-size: 0.9em;
+  padding-left: 25px;
+  z-index: 9;
+  cursor: pointer;
+  font-family: "MyriadPro-Regular", sans-serif;
+  color: #6a6f7a;
+  margin-top: 2px;
+  transition: all 0.25s linear;
+  @include breakpoint($small-min) {
+    font-size: 1em;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#calculation_form label:hover {
+  color: #32343d;
+}
+
+#calculation_form .group-calc-img label {
+  font-size: .85em;
+  padding-left: 22px;
+  @include breakpoint($small-min) {
+    font-size: .9em;
+  }
+  @include breakpoint($small) {
+    font-size: 1em;
+  }
+  @include breakpoint($medium) {
+    padding-left: 25px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#calculation_form .col-fr-calc-1 .group-calc {
+  margin-bottom: 10px;
+  @include breakpoint($small-min) {
+    margin-bottom: 11px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    margin-bottom: 12px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#calculation_form .check {
+  display: block;
+  position: absolute;
+  border: 3px solid #6a6f7a;
+  border-radius: 100%;
+  height: 17px;
+  width: 17px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: $bg-fon-sec;
+  transition: border .25s linear;
+}
+
+/*ul li:hover .check {
+  border: 5px solid #FFFFFF;
+}*/
+
+#calculation_form .check::before {
+  display: block;
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+  height: 7px;
+  width: 7px;
+  top: 2px;
+  left: 2px;
+  margin: auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+}
+
+#calculation_form input[type=radio]:checked ~ .check {
+  border: 3px solid $bg-chek;
+}
+
+#calculation_form input[type=radio]:checked ~ .check::before {
+  background: $bg-chek;
+}
+
+#calculation_form input[type=radio]:checked ~ label {
+  color: #32343d;
+}
+
+/***********************************************
+BG
+***********************************************/
+#example-form-p-0::after {
+  content: '';
+  position: absolute;
+  top: -2%;
+  right: 11%;
+  width: 35%;
+  height: 35%;
+  // opacity: .4;
+  background-image: url("/img/calculation/steps1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @include breakpoint($small-min) {
+    top: 4%;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    top: 11%;
+    right: 12%;
+    // width: 35%;
+    // height: 35%;
+  }
+  @include breakpoint($large) {
+    top: 25%;
+    right: 20%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Figure
+***********************************************/
+.group-calc-0, .group-calc-1, .group-calc-2 {
+  height: 220px;
+  position: relative;
+  @include breakpoint($small-min-sl) {
+    height: 250px;
+  }
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    height: 235px;
+    margin-bottom: 20px;
+  }
+  @include breakpoint($large) {
+    height: 270px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.group-calc-0::after {
+  background-image: url("/img/calculation/ectomorph-h.png");
+  opacity: 0;
+  z-index: 3;
+}
+
+.group-calc-0::before {
+  background-image: url("/img/calculation/ectomorph.png");
+}
+
+.group-calc-1::after {
+  background-image: url("/img/calculation/mesomorph-h.png");
+  opacity: 0;
+  z-index: 3;
+}
+
+.group-calc-1::before {
+  background-image: url("/img/calculation/mesomorph.png");
+}
+
+.group-calc-2::after {
+  background-image: url("/img/calculation/endomorph-h.png");
+  opacity: 0;
+  z-index: 3;
+}
+
+.group-calc-2::before {
+  background-image: url("/img/calculation/endomorph.png");
+}
+
+.gr-calc-hm:hover .hover-fig::after {
+  opacity: 1;
+}
+
+.hover-fig::after, .hover-fig::before {
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  height: 100%;
+  @include transition(all 0.3s);
+}
+
+.gr-calc-hm {
+  position: relative;
+  width: 33.333%;
+  float: left;
+  text-align: center;
+}
+
+.group-calc-img {
+  text-align: left;
+  display: inline-block;
+}
+
+/***********************************************
+Активность
+***********************************************/
+/*.field-calculatorform-activity,.field-calculatorform-goal{
+  width: 50%;
+  float: left;
+}*/
+.col-fr-calc-1 {
+  width: 50%;
+  float: left;
+}
+
+.col-fr-calc-1.pos_r {
+  @include translate(10px, 0);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    @include translate(0, 0);
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.row.hid-media {
+  display: none;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    // display: block;
+  }
+  @include breakpoint($large) {
+    display: block;
+    height: 0;
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.col-fr-calc-0 {
+  width: 50%;
+  float: right;
+}
+
+.second-gr-nm {
+  //margin-top: -30px;
+}
+
+.bg-fin {
+  height: 75px;
+  overflow: hidden;
+  background-image: url("/img/calculation/menu.png");
+  background-repeat: no-repeat;
+  background-position: 5%;
+  background-size: contain;
+  margin-top: -75px;
+  @include breakpoint($small-min-sl) {
+    margin-top: -45px;
+  }
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-top: -55px;
+    height: 120px;
+    background-position: 30%;
+  }
+  @include breakpoint($large) {
+    margin-top: -5%;
+    height: 140px;
+    //background-position: 10%;
+  }
+  @include breakpoint($large-xl) {
+    margin-top: -6%;
+    height: 140px;
+    background-position: 33%;
+  }
+
+}
+
+/***********************************************
+Finish
+***********************************************/
+.wizard > .actions li:last-child a {
+  background: $bg-chek;
+}
+
+/***********************************************
+Error
+***********************************************/
+#response-wr.vracham-resp.error-sent {
+  height: auto;
+}
+
+#response-wr.vracham-resp p {
+  padding: 2% 3%;
+  font-size: 1em;
+  display: block;
+  max-width: 500px;
+  margin: 1% auto;
+  top: 0;
+  text-align: left;
+  transform: translateY(0);
+}
+
+#response-wr.vracham-resp p::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("/img/calculation/close.svg");
+  cursor: pointer;
+}
+
+/***********************************************
+Result
+***********************************************/
+.wr-calc-bl {
+  // padding: 0 5%;
+}
+
+/***********************************************
+Table
+***********************************************/
+#result_block {
+  max-height: 0;
+  transition: max-height 1.5s ease-out, opacity 1s, transform .8s ease-out .4s;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#result_block.visible {
+  max-height: 1900px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#table-calc thead {
+  background: $bg-steps;
+  color: #fff;
+}
+
+#table-calc table thead tr {
+  border: 1px solid $bg-steps;
+}
+
+#table-calc .name-ingestion {
+  background: #6C80A9;
+  padding: 15px 10px;
+  border: none;
+  font-size: 1.1em;
+  color: #fff;
+  border-left: 1px solid #6C80A9;
+  border-right: 1px solid #6C80A9;
+  text-align: center;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    text-align: left;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#table-calc table thead tr th {
+  padding: 20px 10px;
+  font-size: 0.9em;
+}
+
+#table-calc table tbody tr:nth-child(odd) {
+  background: #f6f6f6;
+}
+
+#table-calc table tbody tr:nth-child(even) {
+  background: #ebebeb;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    background: #fff;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#table-calc table {
+  border: 1px solid #ccc;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#table-calc table tr {
+  border: 1px solid #ddd;
+  padding: 7px;
+  font-size: .9em;
+}
+
+#table-calc table th, #table-calc table td {
+  padding: 12px 10px;
+  text-align: center;
+}
+
+#table-calc table td {
+  min-height: 38px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    min-height: 30px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#table-calc table tbody tr {
+  @include transition(all 0.3s);
+}
+
+#table-calc table tbody tr:not(.result-foot):hover {
+  background: #e2e2e2 !important;
+  color: #3d3f48;
+}
+
+#table-calc table td[data-label="Продукт"] {
+  width: 45%;
+}
+
+#table-calc table th {
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+#table-calc tr.result-foot {
+  background: $bg-steps !important;
+  color: #fff;
+}
+
+#table-calc tr.result-foot td {
+  padding: 18px 10px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-height: 50px;
+  line-height: 1;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 20px 10px;
+    min-height: 40px;
+    font-size: 1em;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #table-calc table td[data-label="Продукт"] {
+    width: auto;
+  }
+  #table-calc .empty-td {
+    display: none;
+  }
+  #table-calc table {
+    border: 0;
+  }
+
+  #table-calc table thead {
+    display: none;
+  }
+
+  #table-calc table tr {
+    margin-bottom: 10px;
+    display: block;
+    border-bottom: 2px solid #ddd;
+  }
+
+  #table-calc table td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    border-bottom: 1px dotted #ccc;
+  }
+
+  #table-calc table td:last-child {
+    border-bottom: 0;
+  }
+
+  #table-calc table td:before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+@media print {
+  #table-calc thead {
+    background: #d7d7d7;
+    color: #343434;
+  }
+  #table-calc table {
+    color: #3d3f48;
+  }
+  #table-calc table tr {
+    border: 1px solid #5d5d5d;
+  }
+  #table-calc table tbody tr:nth-child(odd) {
+    background: #e8e8e8;
+  }
+
+  #table-calc table tbody tr:nth-child(even) {
+    background: #fff;
+  }
+  #table-calc .name-ingestion, #table-calc tr.result-foot {
+    color: #404040;
+    background: #dbdbdb;
+  }
+  .wr-btn-group {
+    display: none;
+  }
+}
+
+/***********************************************
+BTN Group
+***********************************************/
+.wr-btn-group {
+  text-align: right;
+}
+
+.btn-group {
+  display: inline-block;
+  margin-top: 10px;
+  overflow: hidden;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    margin-top: 15px;
+    border: 1px solid darken(#dddddd, 2%);
+  }
+  @include breakpoint($medium) {
+    margin-top: 20px;
+  }
+  @include breakpoint($large) {
+    margin-top: 25px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.btn-group a, .btn-group div {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  padding: 19px 20px 18px;
+  text-transform: uppercase;
+  font-size: .7em;
+  line-height: 1;
+  letter-spacing: .5px;
+  font-family: 'Roboto Medium', sans-serif;
+  // color: #fff;
+  color: #43474b;
+  //background: $bg-steps;
+  background: #dddddd;
+  cursor: pointer;
+  margin-bottom: 10px;
+  @include transition(background 0.35s);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    float: left;
+    width: auto;
+    margin-bottom: 0;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.btn-group a:hover, .btn-group div:hover {
+  //background: #6C80A9;
+  background: $bg-steps;
+  color: #fff;
+}
+
+.btn-group a:hover {
+
+}
+
+.btn-group a, .btn-group .has-bor {
+  border-right: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/***********************************************
+Modal
+***********************************************/
+.tlt-send-menu {
+  color: #444248;
+  display: inline-block;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  font-family: 'Roboto Medium', sans-serif;
+}
+
+.remodal.send-email-form {
+  padding-bottom: 40px;
+}
+
+#mail-form .send-el1, #mail-form .send-el2 {
+  float: left;
+}
+
+#mail-form {
+  width: 100%;
+}
+
+#mail-form .send-el1 {
+  width: 70%;
+}
+
+#mail-form .send-el1 input {
+  width: 100%;
+  padding: 11px 10px;
+  border: 1px solid #c3c3c3;
+  border-right-color: transparent;
+  border-radius: 2px;
+  background: #fff;
+  font-size: 1em;
+  color: #444248;
+  font-family: "MyriadPro-Regular", sans-serif;
+}
+
+#mail-form .send-el1 input:hover, #mail-form .send-el1 input:active, #mail-form .send-el1 input:visited {
+  border: 1px solid $bg-steps;
+}
+
+#mail-form .send-el2 {
+  width: 30%;
+}
+
+#mail-form .send-el2 input {
+  display: inline-block;
+  padding: 14px 0;
+  width: 100%;
+  // background: $bg-steps;
+  text-transform: uppercase;
+  font-size: .7em;
+  line-height: 1;
+  letter-spacing: .5px;
+  font-family: 'Roboto Medium', sans-serif;
+  cursor: pointer;
+  // color: #fff;
+  color: #43474b;
+  background: #dddddd;
+  border: 1px solid #c3c3c3;
+  box-shadow: none;
+  border-top-right-radius: 19px;
+  border-bottom-right-radius: 19px;
+
+}
+
+#mail-form .send-el2 input:hover {
+  background: $bg-steps;
+  border: 1px solid $bg-steps;
+  color: #fff;
+}
+
+/***********************************************
+TXT
+***********************************************/
+.block-txt-calc {
+  padding: 0 0 20px 0;
+  margin-top: -10px;
+  width: 100%;
+  // text-align:justify;
+  column-count: 1;
+  column-gap: 0;
+  // column-rule: 1px solid #000;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 0 5% 30px;
+    column-count: 2;
+    column-gap: 30px;
+  }
+  @include breakpoint($large) {
+    padding: 0 10% 30px;
+    column-gap: 45px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.block-txt-calc p {
+  color: darken(#5f5b61, 10%);
+}

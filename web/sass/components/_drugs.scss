@@ -1,0 +1,2585 @@
+@charset "UTF-8";
+/***********************************************
+Body Sculpture + CLA Header & Slider
+***********************************************/
+
+.hd-sec-bg-2 {
+  position: relative;
+  background-color: #CC5D45;
+  background-image: url("/img/body_sculpture/header1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+  }
+}
+
+/*.hd-sec-bg-2::before{
+  content: '';
+  background-color: rgba(204, 93, 69, 0.3);
+  @extend .p-a-100;
+}*/
+.hd-sec .mob-hd {
+  background-size: cover;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+/***********************************************
+TXT
+***********************************************/
+.info-drugs {
+  padding: 100px 0 60px;
+  overflow: hidden;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 120px 0 80px;
+  }
+  @include breakpoint($large) {
+    padding: 140px 0 100px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.info-drugs p {
+  max-width: 450px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+.info-drugs .col-6-r {
+
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-left: 35px;
+  }
+  @include breakpoint($large) {
+    padding-left: 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.info-drugs .col-6-l {
+
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-right: 35px;
+  }
+  @include breakpoint($large) {
+    padding-right: 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.tlt-section {
+  display: inline-block;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+  @extend .Roboto_Bold;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+  }
+  @include breakpoint($large) {
+    padding: 0 20px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.info-drugs .tlt-section {
+  margin-bottom: 70px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-bottom: 10px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.sub-sec-ar {
+  font-size: .9em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  @extend .MyriadPro-Regular;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    font-size: 1em;
+  }
+  @include breakpoint($medium) {
+    font-size: 1.1em;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.sub-note {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-top: 2px;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto Medium', sans-serif;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-family: "MyriadPro-Regular", sans-serif;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.tlt-note {
+  display: inline-block;
+  font-size: 1.4em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  @extend .HouschkaPro-Bold;
+}
+
+.tlt-note-sm {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  max-width: 410px;
+  padding-left: 65px;
+  @extend .Roboto_Medium;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: 1.1em;
+    padding-left: 70px;
+  }
+  @include breakpoint($large) {
+    padding-left: 75px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-tlt-h-sec {
+  margin-bottom: 25px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-bottom: 45px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Breadcrumbs
+***********************************************/
+.breadcrumbs {
+  position: absolute;
+  left: 20px;
+  bottom: 40px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    left: 50px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.breadcrumbs ol, .breadcrumbs li {
+  display: inline-block;
+  position: relative;
+  letter-spacing: 0.5px;
+  font-size: .83em;
+  @include breakpoint($small-min) {
+    font-size: .85em;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: .9em;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+
+}
+
+.breadcrumbs li a, .breadcrumbs li span {
+  padding: 0 8px 0 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 0 20px 0 0;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.breadcrumbs li a, .breadcrumbs li span {
+  color: #fff;
+  text-transform: uppercase;
+  @extend .MyriadPro-Regular;
+}
+
+.breadcrumbs li.it-lk {
+  opacity: .75;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.op-br.bd-sl {
+  opacity: .7;
+}
+
+.breadcrumbs li.bd-sl::after {
+  content: '/';
+  position: absolute;
+  right: 1px;
+  top: 2px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.7em;
+  @extend .MyriadPro-Regular;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: 0.8em;
+    right: 6px;
+    top: 3px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Arrow next
+***********************************************/
+.arr-next {
+  display: none;
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  margin-left: -20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    display: inline-block;
+
+  }
+  @include breakpoint($medium) {
+    bottom: 80px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.arr-next svg {
+  stroke: #fff;
+  width: 40px;
+  height: auto;
+}
+
+/***********************************************
+Food
+***********************************************/
+.food-wr {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.food-wr.food-wr-sm {
+  margin-bottom: 40px;
+}
+
+.food-wr.food-wr-xl {
+  margin-bottom: 10px;
+}
+
+.food-img {
+  display: inline-block;
+  width: 200px;
+  height: auto;
+}
+
+/***********************************************
+Components
+***********************************************/
+.wr-list-comp {
+  width: 95%;
+  margin: 0 auto;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 80%;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.comp-dr {
+  //background: rgba(61, 69, 103, 0.98);
+  // background: $bg-tr;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.note-pd {
+  padding: 70px 0 60px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 60px 0 100px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.comp-dr svg {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-bottom: 25px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.comp-dr ul, .comp-dr li {
+  display: inline-block;
+}
+
+.comp-dr ul {
+  width: 100%;
+}
+
+.comp-dr ul.two-comp {
+  width: 70%;
+}
+
+.comp-dr li {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    width: 33.333%;
+    float: left;
+    margin-bottom: 0;
+  }
+  @include breakpoint($medium) {
+    width: 33.333%;
+    float: left;
+    margin-bottom: 0;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.comp-dr .two-comp li {
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    width: 50%;
+    padding: 0 20px;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+
+}
+
+.comp-dr h6 {
+  font-size: 1.1em;
+  vertical-align: bottom;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  @extend .MyriadPro-Regular;
+  @extend .color-w-b-u;
+
+}
+
+.comp-dr h6 br {
+  //margin-bottom: 3px;
+}
+
+.comp-dr h6 span {
+  text-transform: uppercase;
+  font-size: 0.95em;
+  margin-bottom: 5px;
+  @extend .Roboto_Medium;
+  @extend .color-w-b;
+}
+
+/***********************************************
+After Section
+***********************************************/
+
+.af-sec-line-bor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 260px;
+  border-left-width: 100%;
+  //border-color: transparent transparent transparent $bg-main-b;
+  z-index: -1;
+}
+
+/***********************************************
+Section Padding
+***********************************************/
+.pad-def-top {
+  padding-top: 40px;
+  @include breakpoint($small-min) {
+    padding-top: 50px;
+  }
+  @include breakpoint($small) {
+    padding-top: 60px;
+  }
+  @include breakpoint($medium) {
+    padding-top: 100px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.pad-def-top-sl {
+  padding-top: 50px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    padding-top: 60px;
+  }
+  @include breakpoint($medium) {
+    padding-top: 80px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.pad-def-bt {
+  padding-bottom: 60px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-bottom: 80px;
+  }
+  @include breakpoint($large) {
+    padding-bottom: 110px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.pad-def-bt-sm {
+  padding-bottom: 50px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-bottom: 90px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.pad-def-top-s {
+  padding-top: 40px;
+}
+
+.pad-sec-def-in {
+  padding-top: 30px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-top: 55px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+WHY
+***********************************************/
+.why {
+  // background: #f8f8f8;
+  background: #F5F5F5;
+}
+
+/*tlt photo*/
+.tlt-bl-ph {
+  position: relative;
+  display: inline-block;
+  font-size: 1.25em;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  -moz-osx-font-smoothing: grayscale;
+  @extend .color-h-sec;
+  // @extend .HouschkaPro-Bold;
+  @extend .Roboto_Medium;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding-bottom: 19px;
+    margin-bottom: 18px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.tlt-bl-ph::after {
+  background: #9c9d9e;
+  @extend .after-ab-50;
+}
+
+.wr-ph-txt {
+  display: inline-block;
+  max-width: 450px;
+}
+
+.wr-ph-txt-def {
+  padding: 45px 20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    padding: 55px 35px;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding: 20% 10%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-ph-txt-sm {
+  padding: 45px 20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    padding: 55px 35px;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding: 25% 10%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-ph-txt-big {
+  padding: 45px 20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    padding: 55px 35px;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding: 15% 10%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.check-ph {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  @extend .bg-contain;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    right: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+  }
+  @include breakpoint($large) {
+    width: 30px;
+    height: 30px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.check-ph-l {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  @extend .bg-contain;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    right: auto;
+    left: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+  }
+  @include breakpoint($large) {
+    width: 30px;
+    height: 30px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bg-check-ph, .body-link .check-link {
+  background-image: url("/img/svg-min/check-fill.svg");
+}
+
+.bg-check-wh {
+  background-image: url("/img/svg-min/check-bd-wh.svg");
+}
+
+.check-anim, .check-anim-car, .check-anim-c {
+  @include scale(0);
+  opacity: 0;
+  @extend .transition-all;
+}
+
+.check-anim.active, .check-anim-car.active, .check-anim-c.active {
+  @include scale(1);
+  opacity: 1;
+}
+
+/***********************************************
+BG Drugs
+***********************************************/
+.img-cover {
+  @extend .w-h-100;
+  @extend .bg-cover;
+}
+
+.img-scale-bl {
+  @include scale(1.05);
+  @extend .transition-all-img;
+}
+
+.img-scale-bl.active {
+  @include scale(1);
+}
+
+.bg-bod-1 {
+  background-image: url("/img/body_sculpture/1.jpg");
+}
+
+.bg-bod-2 {
+  background-image: url("/img/body_sculpture/2.jpg");
+}
+
+.bg-bod-3 {
+  background-image: url("/img/body_sculpture/3.jpg");
+}
+
+/***********************************************
+Vantage
+***********************************************/
+/*.vantage {
+  background: #fbfbfb;
+  // display: none;
+}
+
+.card-dr {
+  width: 25%;
+  padding: 0 10px;
+  float: left;
+}
+
+.card-dr.tr-card {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.card-dr-it {
+  background: $bg-main-b;
+  @extend .p-r;
+  @extend .w-h-100;
+}
+
+.card-dr-it::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 0;
+  bottom: 0;
+  border-style: solid;
+  border-top-width: 0;
+  border-right-width: 35px;
+  border-bottom-width: 35px;
+  border-left-width: 0;
+  border-color: transparent transparent lighten($bg-main-b, 5%) transparent;
+  z-index: 3;
+}
+
+.svg-best {
+  padding: 80px 0 30px;
+}
+
+.svg-best svg {
+  display: inline-block;
+  width: 130px;
+  height: auto;
+}
+
+.txt-card {
+  position: relative;
+  padding: 25px 25px 35px;
+  margin-top: 60px;
+}
+
+.txt-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  border-top: 1px dotted rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.txt-card p {
+  vertical-align: bottom;
+  color: #fbfbfb;
+  font-size: 1.1em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.num-best {
+  @extend .p-a-100;
+}
+
+.num-best::after {
+  display: inline-block;
+  @extend .HouschkaPro-ExtraBold;
+  font-size: 250px;
+  color: rgba(255, 255, 255, 0.07);
+  padding-top: 40px;
+}
+
+.num1::after {
+  content: '1';
+}
+
+.num2::after {
+  content: '2';
+}
+
+.num3::after {
+  content: '3';
+}
+
+.num4::after {
+  content: '4';
+}*/
+
+/***********************************************
+КАК РАБОТАЕТ БЕЛКОВЫЙ КОКТЕЛЬ
+***********************************************/
+.job-port {
+  background: #f6f6f6;
+}
+
+.col-2 {
+  width: 100%;
+  line-height: 1.4;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    column-count: 2;
+    column-gap: 100px;
+    column-rule: 1px solid #ccc;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+
+}
+
+.col-2 br {
+  margin-bottom: 20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-bottom: 10px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.aft-set::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  @extend .bg-contain;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-top: -30px;
+    width: 60px;
+    height: 60px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.com-set-bd1::after {
+  background-image: url("/img/svg-min/3-bel.svg");
+}
+
+.com-set-bd2::after {
+  background-image: url("/img/svg-min/CLA.svg");
+}
+
+.list-num li {
+  position: relative;
+  text-align: left;
+  padding-left: 45px;
+  margin-bottom: 25px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-left: 60px;
+    margin-bottom: 40px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+
+}
+
+.list-num.is-ul li {
+  padding-left: 80px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    //min-height: 40px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-num.is-ul li p {
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    min-height: 40px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-num li p {
+  line-height: 1.35;
+  margin: 0;
+}
+
+.list-num li::after {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  font-size: 3em;
+  opacity: .2;
+  @extend .Roboto_Medium;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: 4em;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-num.list-num-bd li::after {
+  color: $bg_body_sculpture;
+}
+
+.list-num.list-num-ep li::after {
+  color: $energy-power;
+}
+
+.num-list1::after {
+  content: '1';
+}
+
+.num-list2::after {
+  content: '2';
+}
+
+.num-list3::after {
+  content: '3';
+}
+
+/*Isitonic*/
+.list-num.is-ul li::after {
+  top: 50%;
+  margin-top: -30px;
+  opacity: 1;
+  padding: 1px;
+}
+
+.list-is1::after, .list-is2::after, .list-is3::after, .list-et2::after, .list-et1::after,
+.list-et3::after, .list-ar-all::after {
+  width: 60px;
+  height: 60px;
+  content: ' ';
+  @extend .bg-contain;
+}
+
+.list-is1::after {
+  background-image: url("/img/isotonic/list1.png");
+}
+
+.list-is2::after {
+  background-image: url("/img/isotonic/list2.png");
+}
+
+.list-is3::after {
+  background-image: url("/img/isotonic/list3.png");
+}
+
+.list-et2::after {
+  background-image: url("/img/energy_tonic/list1.png");
+}
+
+.list-et1::after {
+  background-image: url("/img/energy_tonic/list2.png");
+}
+
+.list-et3::after {
+  background-image: url("/img/energy_tonic/list3.png");
+}
+
+.job-port .tlt-note-sm {
+  margin-bottom: 35px;
+  clear: both;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-bottom: 45px;
+  }
+  @include breakpoint($large) {
+    margin-bottom: 60px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.pad-ic-tlt {
+
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    //margin-left: 60px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.large-tlt {
+
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-top: -20px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Before After
+***********************************************/
+.before_after .l1-bl {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 30%;
+    float: left;
+    margin-top: 0;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.before_after .l1-bl img {
+  max-width: 260px;
+  width: 90%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20%;
+  }
+  @include breakpoint($large) {
+    padding-top: 0;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.before_after .r2-bl {
+  width: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 70%;
+    float: left;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.before_after .list-img-l {
+  margin-top: 40px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-left: 30px;
+    margin-top: 0;
+  }
+  @include breakpoint($large) {
+    padding-top: 9%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-img-l li p {
+  line-height: 1.2;
+  @extend .vertical-center;
+}
+
+.list-img-l li {
+  height: calc(100% / 3);
+  display: block
+}
+
+/***********************************************
+Divert
+***********************************************/
+.divert {
+  height: 350px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    height: 400px;
+  }
+  @include breakpoint($medium) {
+    height: 450px;
+  }
+  @include breakpoint($large) {
+    height: 500px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.divert-txt {
+  position: absolute;
+  bottom: 20%;
+
+}
+
+.divert-txt-l {
+  left: 5%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    left: 20%;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.divert-txt-r {
+  right: 5%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    right: 20%;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.divert-txt h3 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+  @extend .MyriadPro-Regular;
+}
+
+.divert-txt h3 span {
+  font-size: 1.5em;
+  line-height: 1.4;
+  @extend .HouschkaPro-Bold;
+}
+
+/***********************************************
+THE NUTRITIONAL VALUE
+***********************************************/
+.nutrutional {
+  background: #fff;
+}
+
+.wr-nutrutional-img {
+  margin-top: 35px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 0 10%;
+  }
+  @include breakpoint($large) {
+    padding: 0 17%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-nutrutional-img.is-nut {
+  margin-top: 35px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 0 10%;
+  }
+  @include breakpoint($large) {
+    padding: 0 13%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.filter-img {
+  // filter: grayscale(100%);
+  // @include translate(0,30px);
+  @extend .transition-all-def;
+  @include scale(0.98);
+}
+
+.filter-img.active {
+  // filter: none;
+  // @include translate(0,0);
+  @include scale(1);
+}
+
+.mix-img {
+  @extend .bg-contain;
+  //height: 60px;
+
+}
+
+.not-gmo {
+  height: 30px;
+  @extend .bg-contain;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.mix-bd-bg {
+  height: 75px;
+  margin-top: 20px;
+  background-image: url("/img/svg-min/mix.svg");
+  // background-position: right;
+}
+
+.mix-bd-bg-2 {
+  height: 85px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-image: url("/img/dashboard/mix.png");
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.not-bd-bg {
+  background-image: url("/img/body_sculpture/7.png");
+  // background-position: left;
+}
+
+.adoption {
+  padding-top: 50px;
+  width: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 95%;
+    padding-top: 40px;
+  }
+  @include breakpoint($large) {
+    width: 80%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-adoption {
+  padding-top: 30px;
+  border-top: 1px dotted #dcdcdc;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-top: 40px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-adoption > div {
+
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 0 35px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+List Drugs
+***********************************************/
+/*
+.list-pr-link li{
+  display: inline-block;
+  width: 20%;
+  float: left;
+}
+.list-pr-link li.active{
+  opacity: .7;
+}
+.list-pr-link li img{
+  max-width: 100%;
+  height: auto;
+}*/
+
+/***********************************************
+Vitime Body Sculpture + CLA
+***********************************************/
+$col-bd: #383C5E;
+.col-bd {
+  background: $col-bd;
+  background-image: radial-gradient(50% 237%, #3E446C 52%, #383C5E 100%);
+}
+
+.bd-border {
+  border-color: transparent transparent transparent darken(#3E446C, 2%);
+}
+
+.divert-bg {
+  background-image: url("/img/body_sculpture/note.jpg");
+  @extend .bg-cover;
+}
+
+/***********************************************
+VITIME Energy Power + L-carnitine
+***********************************************/
+.hd-sec-bg-3 {
+  background-color: $energy-power;
+  background-repeat: no-repeat;
+  background-image: url("/img/energy_power/header.jpg");
+  background-position: center;
+  background-size: cover;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+  }
+}
+
+.ep-bod-1 {
+  background-image: url("/img/energy_power/1.jpg");
+}
+
+.ep-bod-2 {
+  background-image: url("/img/energy_power/2.jpg");
+}
+
+.ep-bod-3 {
+  background-image: url("/img/energy_power/3.jpg");
+}
+
+.bg-check-ep, .power-link .check-link {
+  background-image: url("/img/svg-min/check-ep.svg");
+}
+
+.com-set-ep1::after {
+  background-image: url("/img/svg-min/3-bel-ep.svg");
+}
+
+.com-set-ep2::after {
+  background-image: url("/img/svg-min/L-EP.svg");
+}
+
+.divert-bg-ep {
+  background-image: url("/img/energy_power/divert.jpg");
+  @extend .bg-cover;
+}
+
+.not-ep-bg {
+  background-image: url("/img/energy_power/7.png");
+  // background-position: left;
+}
+
+.ep-van {
+  position: relative;
+  background-image: url("/img/vantage/2.jpg");
+  z-index: 0;
+}
+
+.ep-van::before {
+  content: '';
+  @extend .p-a-100;
+  background: #423E6C;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: none;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.col-ep {
+  background: #423E6C;
+  background-image: radial-gradient(50% 237%, #423E6C 52%, #38385E 100%);
+}
+
+.ep-border {
+  border-color: transparent transparent transparent darken(#423E6C, 2%);
+}
+
+/***********************************************
+VITIME Isotonic + BCAA
+***********************************************/
+.hd-sec-bg-4 {
+  // background-color: $isotonik;
+  background-color: #EFB857;
+  background-image: url("/img/isotonic/heaedr2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+  }
+}
+
+.is-bod-1 {
+  background-image: url("/img/isotonic/1.jpg");
+}
+
+.is-bod-2 {
+  background-image: url("/img/isotonic/5.jpg");
+}
+
+.is-bod-3 {
+  background-image: url("/img/isotonic/3.jpg");
+}
+
+.bg-check-is, .isot-link .check-link {
+  background-image: url("/img/svg-min/check-is.svg");
+}
+
+.com-set-is1::after {
+  background-image: url("/img/svg-min/BCAA.svg");
+}
+
+.com-set-is2::after {
+  background-image: url("/img/svg-min/CA.svg");
+}
+
+.com-set-is3::after {
+  background-image: url("/img/svg-min/CBB.svg");
+}
+
+.mar-top {
+  margin-top: 20px;
+}
+
+.divert-bg-is {
+  background-image: url("/img/isotonic/11.jpg");
+  @extend .bg-cover;
+}
+
+.not-is-bg {
+  background-image: url("/img/isotonic/6-1.png");
+  // background-position: left;
+}
+
+.is-van {
+  position: relative;
+  background-image: url("/img/vantage/4-4.jpg");
+  z-index: 0;
+}
+
+.is-van::before {
+  content: '';
+  @extend .p-a-100;
+  background: #e2ad53;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: none;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/*.isbg-l{
+  background: rgba(239, 184, 87, 0.90);
+}*/
+/***********************************************
+VITIME Energy Tonic +  Guarana
+***********************************************/
+.hd-sec-bg-5 {
+  background-color: #A84281;
+  background-image: url("/img/energy_tonic/header1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+  }
+}
+
+.et-bod-1 {
+  background-image: url("/img/energy_tonic/1-1.jpg");
+}
+
+.et-bod-2 {
+  background-image: url("/img/energy_tonic/3.jpg");
+}
+
+.firs-b {
+  margin-top: 10px;
+}
+
+.br-af {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.br-af::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  margin-top: -3px;
+  background: #423d44;
+}
+
+.divert-bg-et {
+  background-image: url("/img/energy_tonic/16.jpg");
+  @extend .bg-cover;
+}
+
+.filter-et {
+  margin-right: -7%;
+}
+
+.not-et-bg {
+  background-image: url("/img/energy_tonic/14-1.png");
+  // background-position: left;
+}
+
+//
+.bg-check-et, .energy-link .check-link {
+  background-image: url("/img/svg-min/check-et.svg");
+}
+
+.et-van {
+  position: relative;
+  background-image: url("/img/vantage/2-2.jpg");
+  z-index: 0;
+}
+
+.et-van::before {
+  content: '';
+  background: #A84281;
+  @extend .p-a-100;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: none;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+VITIME Arthro
+***********************************************/
+.hd-sec-bg-6 {
+  background-color: $arthra;
+  background-image: url("/img/arthra/header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+  }
+}
+
+.bg-check-ar, .ar-link .check-link {
+  background-image: url("/img/svg-min/check-ar.svg");
+}
+
+.ar-bod-1 {
+  background-image: url("/img/arthra/2.jpg");
+}
+
+.ar-bod-2 {
+  background-image: url("/img/arthra/3.jpg");
+}
+
+.ar-bod-3 {
+  background-image: url("/img/arthra/4.jpg");
+}
+
+.list-ar1::after {
+  background-image: url("/img/arthra/list1.png");
+}
+
+.list-ar2::after {
+  background-image: url("/img/arthra/list2.png");
+}
+
+.list-ar3::after {
+  background-image: url("/img/arthra/list3.png");
+}
+
+.list-ar4::after {
+  background-image: url("/img/arthra/list4.png");
+}
+
+.list-ar5::after {
+  background-image: url("/img/arthra/list5.png");
+}
+
+.list-ar6::after {
+  background-image: url("/img/arthra/list6.png");
+}
+
+.divert-bg-ar {
+  background-image: url("/img/arthra/10.jpg");
+  @extend .bg-cover;
+}
+
+.not-ar-bg {
+  background-image: url("/img/arthra/9_1.png");
+}
+
+.ar-van {
+  position: relative;
+  background-image: url("/img/vantage/3-3.jpg");
+  z-index: 0;
+}
+
+.ar-van::before {
+  content: '';
+  background: darken($arthra, 10%);
+  @extend .p-a-100;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: none;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+
+}
+
+/***********************************************
+VITIME Arthro + curcumin
+***********************************************/
+.hd-sec-bg-7 {
+  background-color: $arthro_curcumin;
+  background-image: url("/img/arthra_curcuma/index_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+  }
+}
+
+.arcu-bod-1 {
+  background-image: url("/img/arthra_curcuma/1_3.jpg");
+}
+
+.arcu-bod-2 {
+  // background-image: url("/img/arthra_curcuma/2.jpg");
+  background-image: url("/img/arthra_curcuma/5.jpg");
+}
+
+.arcu-bod-3 {
+  background-image: url("/img/arthra_curcuma/3_1.jpg");
+}
+
+.arcu-van {
+  position: relative;
+  background-image: url("/img/arthra_curcuma/advantages.jpg");
+  z-index: 0;
+}
+
+.divert-bg-arcu {
+  background-image: url("/img/arthra_curcuma/divert_1.jpg");
+  @extend .bg-cover;
+}
+
+.list-arcu1::after {
+  background-image: url("/img/arthra_curcuma/arcuc_icon1.png");
+}
+
+.list-arcu2::after {
+  background-image: url("/img/arthra_curcuma/arcuc_icon2.png");
+}
+
+.list-arcu3::after {
+  background-image: url("/img/arthra_curcuma/arcuc_icon3.png");
+}
+
+.list-arcu4::after {
+  background-image: url("/img/arthra_curcuma/arcuc_icon4.png");
+}
+
+.list-arcu5::after {
+  background-image: url("/img/arthra_curcuma/arcuc_icon5.png");
+}
+
+.list-arcu6::after {
+  background-image: url("/img/arthra_curcuma/arcuc_icon6.png");
+}
+
+.list-arcu7::after {
+  background-image: url("/img/arthra_curcuma/arcuc_icon7.png");
+}
+
+.list-arcu8::after {
+  background-image: url("/img/arthra_curcuma/arcuc_tlt2.png");
+}
+
+.list-arcu9::after {
+  background-image: url("/img/arthra_curcuma/arcuc_tlt1.png");
+}
+
+.bg-check-ar, .arcu-link .check-link {
+  background-image: url("/img/svg-min/check-arcu.svg");
+}
+
+#question-list .wr-tag-fo a.b-arthro-curcumin::after {
+  background-image: url(/img/svg-min/tag-arcu.svg);
+}
+
+/*.com-set-cu2::after {
+  background-image: url("/img/arthra_curcuma/arcuc_tlt2.png");
+}*/
+/***********************************************
+P Block
+***********************************************/
+.p-block {
+  margin-bottom: 45px;
+}
+
+.p-block-l {
+  margin-bottom: 50px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-bottom: 70px;
+  }
+  @include breakpoint($large) {
+    margin-bottom: 110px;
+  }
+  @include breakpoint($large-xl) {
+    margin-bottom: 120px;
+  }
+}
+
+/***********************************************
+vantage-n
+***********************************************/
+.vantage-mr {
+  margin-top: 25px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-top: 30px;
+  }
+  @include breakpoint($large) {
+    margin-top: 35px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bd-van {
+  position: relative;
+  background-image: url("/img/vantage/1_1.jpg");
+  z-index: 0;
+}
+
+.bd-van::before {
+  content: '';
+  background: rgba(209, 95, 71, 1);
+  @extend .p-a-100;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: none;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.block-left {
+  @include grid-span(12, 1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    @include grid-span(6, 7);
+  }
+  @include breakpoint($large-xl) {
+
+  }
+
+}
+
+.list-dr-best {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    padding-top: 40px;
+    padding-bottom: 55px;
+  }
+  @include breakpoint($medium) {
+    width: 70%;
+    margin: 0 auto;
+  }
+  @include breakpoint($large) {
+    width: 100%;
+    padding: 55px 55px 60px 65px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-dr-best.list-dr-big {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    padding-top: 40px;
+    padding-bottom: 55px;
+  }
+  @include breakpoint($medium) {
+    width: 70%;
+    margin: 0 auto;
+  }
+  @include breakpoint($large) {
+    width: 100%;
+    padding: 65px 55px 70px 65px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+
+}
+
+.list-dr-best li {
+  position: relative;
+  display: block;
+  padding-left: 85px;
+  padding-bottom: 30px;
+  padding-top: 40px;
+  // min-height: 104px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding-left: 100px;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    min-height: 104px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-dr-best li p {
+  position: relative;
+  line-height: 1.3;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  margin: 0;
+  @extend .Roboto_Medium;
+  @extend .transition-opacity;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    position: static;
+    font-size: 0.9em;
+    line-height: 1.2;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-dr-best li svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -35px;
+  width: 70px;
+  height: 70px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    margin-top: -40px;
+    width: 80px;
+    height: 80px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.svg-comp .cr-svg-van {
+  fill: #fff;
+  fill-opacity: 0;
+  stroke: #fff;
+  @include transition(fill-opacity 0.3s);
+}
+
+.svg-comp.active .cr-svg-van {
+  fill-opacity: 0.08;
+}
+
+.svg-comp .cr-svg-van-is {
+  fill: #EFB857;
+  fill-opacity: 0;
+  stroke: #fff;
+  @include transition(fill-opacity 0.3s);
+}
+
+.svg-comp.active .cr-svg-van-is {
+  fill-opacity: 0.4;
+}
+
+.check-n {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  background-image: url("/img/svg-min/chek-wt.svg");
+  @extend .bg-contain;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    top: 20%;
+    right: -35px;
+    width: 25px;
+    height: 25px;
+  }
+  @include breakpoint($large) {
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Num Section
+***********************************************/
+.num-art {
+  position: absolute;
+  top: 35px;
+  left: 35%;
+  // left: 50%;
+  margin-left: -96px;
+  font-size: 10em;
+  opacity: 0;
+  height: 100%;
+  line-height: 100%;
+  z-index: 1;
+  @include scale(0.95);
+  @extend .HouschkaPro-ExtraBold;
+  @extend .transition-all;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    left: 40px;
+    top: 40px;
+    margin-left: 0;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.note-pd .num-art {
+  top: 20px;
+}
+
+.num-art.active {
+  opacity: 0.05;
+  @include scale(1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    opacity: 0.1;
+  }
+  @include breakpoint($medium) {
+    opacity: 0.15;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.num-art.num-ar-d {
+  opacity: .15;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    opacity: .2;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-num h5 {
+  line-height: 1.2;
+  color: $color-h;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: Roboto Medium, sans-serif;
+}
+
+/***********************************************
+Купить
+***********************************************/
+.n-sl-f-dr {
+  width: 145px;
+  margin: 5px auto 30px;
+  display: block;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin: 5px auto 40px;
+  }
+  @include breakpoint($large) {
+    margin: 5px auto 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+
+}

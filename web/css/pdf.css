@@ -1,0 +1,93 @@
+.container {
+    font-size: 16px;
+    line-height: 1.2;
+    font-family: Helvetica, sans-serif;
+    color: #555555;
+    font-weight: normal;
+    text-align: center;
+}
+
+.tlt-result-menu {
+    font-weight: 500;
+    font-family: Helvetica, sans-serif;
+    margin-bottom: 0;
+    color: #2c2c2c;
+    text-shadow: 0 0 0;
+}
+
+.txt-left {
+    text-align: left;
+}
+
+h4 {
+    text-decoration: underline;
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #2c2c2c;
+    text-shadow: 0 0 0;
+}
+.tf{
+    color: #2c2c2c;
+    text-shadow: 0 0 0;
+}
+
+table {
+    font-family: Helvetica, sans-serif;
+    color: #535353;
+}
+
+thead tr th {
+    background: #d0d0d0;
+    color: #2c2c2c;
+    font-size: 12px;
+    padding: 5px;
+    font-weight: 500;
+    font-family: Helvetica, sans-serif !important;
+}
+
+table tr td {
+    padding: 5px;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+table tbody tr:nth-child(odd) {
+    background: #fbfbfb;
+}
+
+table tbody tr:nth-child(even) {
+    background: #fff;
+}
+
+tr td.name-ingestion, tr.result-foot td {
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    color: #2c2c2c;
+    text-shadow: 0 0 0;
+}
+
+.name-ingestion, tr.result-foot td {
+    color: #2c2c2c;
+    font-family: Helvetica, sans-serif;
+    background: #d0d0d0;
+    text-shadow: 0 0 0;
+}
+
+.list-ul {
+    width: 33.333%;
+    float: left;
+    text-align: left;
+}
+
+ul li {
+    list-style: disc;
+    list-style-position: outside;
+    font-family: Helvetica, sans-serif;
+    color: #535353;
+    font-size: 12px;
+    margin-bottom: 5px;
+}

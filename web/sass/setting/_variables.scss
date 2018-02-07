@@ -1,0 +1,60 @@
+/***********************************************
+Media
+***********************************************/
+@include add-grid(12);
+@include add-gutter(0);
+@include add-gutter-style('split');
+$small-min: 480px;
+$small: 640px;
+$medium: 768px;
+$large: 1023px;
+$large-xl: 1220px;
+/***********************************************
+Setting Site Main
+***********************************************/
+$max-width-site: 1700px;
+$min-width-site: 320px;
+$max-width-container: 1300px;
+$min-width-container: 320px;
+$min-width-row:320px;
+/***********************************************
+Colors Typography
+***********************************************/
+$color-txt: #5f5b61;
+
+
+$color-menu: #fbfbfb;
+$color-menu-scroll: #38344b;
+//$primary-color-light: lighten($color-icon-fill, 15%) !default;
+//$primary-color-dark: darken($primary-color, 10%) !default;
+
+$color-h: #423d44;
+$color-h-b: #2e2930;
+
+$color-title-sl-w:darken(#fff,5%);
+/***********************************************
+BTN
+***********************************************/
+
+/***********************************************
+BG Line Title
+***********************************************/
+$bg-line-w-sec:darken(#fff,20%);
+/***********************************************
+Color
+***********************************************/
+$body-sc:#D15F47;
+$energy-power:#533F72;
+$isotonik:#FBC45D;
+$energy-tonic:#B24687;
+$arthra:#3CA3C3;
+/***********************************************
+BG Main
+***********************************************/
+$bg-main-b: #464a71;
+//$bg-main-b: #484a71;
+$bg-tr: rgba(72, 74, 113, 0.98);
+
+///#3D4567
+
+

@@ -1,0 +1,531 @@
+/***********************************************
+Grid normal
+***********************************************/
+.media{
+  font-size: 10px;
+  @include breakpoint($small-min) {
+    font-size: 20px;
+  }
+  @include breakpoint($small) {
+    font-size: 30px;
+  }
+  @include breakpoint($medium) {
+    font-size: 40px;
+  }
+  @include breakpoint($large) {
+    font-size: 50px;
+  }
+  @include breakpoint($large-xl) {
+    font-size: 60px;
+  }
+}
+
+/***********************************************
+Vertical center
+***********************************************/
+.vertical-center {
+  @include vertical-center();
+}
+.ver-cen-sl{
+  top: 45%;
+  position: relative;
+  -webkit-transform: translateY(-55%);
+  transform: translateY(-55%);
+}
+/***********************************************
+Other
+***********************************************/
+.after-ab-100-1{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+}
+.p-r {
+  position: relative;
+}
+.p-a-100{
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.hidden {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+figcaption a {
+  text-decoration: none !important;
+}
+
+a, button {
+  -ms-touch-action: manipulation;
+}
+
+a:checked, a:focus, a:active {
+  -moz-outline: none;
+  -webkit-outline: none;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/*a, a:hover, input, textarea {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}*/
+.full-img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0 0 -4px 0;
+  overflow: hidden;
+  z-index: 3;
+}
+.flo-left{
+  float: left;
+}
+.flo-rt{
+  float: right;
+}
+.i-b {
+  display: inline-block;
+}
+
+.text-tr {
+  text-transform: uppercase;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-justify {
+  text-align: justify;
+}
+
+ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+br {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: inline-block;
+}
+
+.h-100 {
+  height: 100%;
+  min-height: 100%;
+}
+
+.bg-default-100 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+.w-h-100{
+  width: 100%;
+  height: 100%;
+}
+.clearfix{
+  @include clearfix;
+}
+/***********************************************
+Positions
+***********************************************/
+.overflow {
+  overflow: hidden;
+}
+
+/***********************************************
+BG
+***********************************************/
+.bg-drug1 {
+  background: rgba(166, 141, 193, 0.90);
+}
+
+.bg-drug2 {
+  background: rgba(223, 95, 70, 0.96);
+}
+.bg-drug3{
+  background: #ecc556;
+}
+.bg-drug4{
+  background: #5CADCB;
+}
+.bg-drug5{
+  background: #B94C73;
+}
+.bg-footer{
+  background: #3D3B44;
+}
+/***********************************************
+Fonts
+***********************************************/
+.HouschkaPro-Medium {
+  font-family: 'HouschkaPro-Medium', sans-serif;
+}
+
+.HouschkaPro-ExtraBold {
+  font-family: "HouschkaPro-ExtraBold", sans-serif;
+}
+
+.HouschkaPro-Bold {
+  font-family: "HouschkaPro-Bold", sans-serif;
+}
+
+.MyriadPro-Regular {
+  font-family: "MyriadPro-Regular", sans-serif;
+  font-weight: 400;
+}
+
+.HouschkaPro-Light {
+  font-family: "HouschkaPro-Light", sans-serif;
+}
+.Roboto_Medium{
+  font-family: 'Roboto Medium', sans-serif;
+}
+/*.Roboto{
+  font-family: 'Roboto', sans-serif;
+}*/
+/*.Roboto_Bold{
+  font-family:'Roboto Bold', sans-serif;
+}*/
+/***********************************************
+Show
+***********************************************/
+
+/***********************************************
+Color
+***********************************************/
+.color-h{
+  color: $color-h;
+}
+.color-h-b{
+  color: $color-h-b;
+}
+/***********************************************
+BG
+***********************************************/
+
+/***********************************************
+Transition
+***********************************************/
+.translate3d {
+  // @include translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotate(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotate(0deg);
+  -o-transform: translate3d(0, 0, 0) rotate(0deg);
+  transform: translate3d(0, 0, 0) rotate(0deg);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  @include translate(0, 0);
+}
+
+.reset-tr {
+  // @include translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotate(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotate(0deg);
+  -o-transform: translate3d(0, 0, 0) rotate(0deg);
+  transform: translate3d(0, 0, 0) rotate(0deg);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.transition-all {
+  @include transition(all 0.3s);
+}
+
+.transition-all-def {
+  @include transition(all 0.7s ease-in-out);
+}
+
+.transition-all-up {
+  @include transition(all 0.5s);
+}
+
+.transition-height {
+  @include transition(height 0.4s ease-in-out);
+}
+
+.transition-max-height {
+  @include transition(max-height 0.4s ease-in-out);
+}
+
+.transition-bg {
+  @include transition(background 0.4s);
+}
+
+.transition-opacity {
+  @include transition(opacity 0.35s);
+}
+
+.transition-color {
+  @include transition(color 0.3s);
+}
+
+.transition-transform-img {
+  transition: transform 2s ease-in-out;
+}
+.transition-transform{
+  transition: transform 0.35s ease-in-out;
+}
+.transition-width {
+  @include transition(width 0.35s ease-in-out);
+}
+
+.stop-element {
+  @include translate(0, 0);
+  @include translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.transition-box-shadow {
+  @include transition(box-shadow 0.2s ease-in-out);
+}
+
+/***********************************************
+Z Lewels
+***********************************************/
+/*.z-depth-1 {
+  @include box-shadow-2(0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12));
+}
+
+.z-depth-1-half {
+  @include box-shadow-2(3px 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15));
+}*/
+
+/***********************************************
+Other
+***********************************************/
+a:link, a:visited:link {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+
+/***********************************************
+Animation
+***********************************************/
+
+@include keyframes(widthIn) {
+  0% {
+    width: 0;
+  }
+  100% {
+    @include translate(0, 0);
+    width: 100%;
+  }
+}
+/*
+@include keyframes(inFon) {
+  0% {
+    @include scale(0.98);
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    @include scale(1);
+  }
+}*/
+
+//Help Touchpad
+/*@include keyframes(touchHelp) {
+  0% {
+    opacity: 0;
+    @include translate(0, 0);
+  }
+  5% {
+    opacity: 1;
+  }
+  20% {
+    @include translate(-13px, 0);
+  }
+  40% {
+    @include translate(0, 0);
+  }
+  60% {
+    @include translate(13px, 0);
+  }
+  80% {
+    @include translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    @include translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes tada {
+  0% {
+    transform: scale(1);
+  }
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@-webkit-keyframes cd-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    box-shadow: inset 0 0 1px 1px rgba(98, 106, 130, 0.8);
+  }
+  50% {
+    box-shadow: inset 0 0 1px 1px rgba(98, 106, 130, 0.8);
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+    box-shadow: inset 0 0 1px 1px rgba(217, 83, 83, 0);
+  }
+}
+
+@-moz-keyframes cd-pulse {
+  0% {
+    -moz-transform: scale(1);
+    box-shadow: inset 0 0 1px 1px rgba(98, 106, 130, 0.8);
+  }
+  50% {
+    box-shadow: inset 0 0 1px 1px rgba(98, 106, 130, 0.8);
+  }
+  100% {
+    -moz-transform: scale(1.6);
+    box-shadow: inset 0 0 1px 1px rgba(217, 83, 83, 0);
+  }
+}
+
+@keyframes cd-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    box-shadow: inset 0 0 1px 1px rgba(98, 106, 130, 0.8);
+  }
+  50% {
+    box-shadow: inset 0 0 1px 1px rgba(98, 106, 130, 0.8);
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    transform: scale(1.6);
+    box-shadow: inset 0 0 1px 1px rgba(217, 83, 83, 0);
+  }
+}
+
+//Touch2
+@include keyframes(flipOutX) {
+  0% {
+    @include rotateX(0deg);
+    opacity: 0;
+    font-size: 0;
+  }
+  5% {
+    @include rotateX(30deg);
+    opacity: 1;
+    font-size: 35px;
+  }
+  20% {
+    @include rotateX(0deg);
+  }
+  40% {
+    @include rotateX(30deg);
+  }
+  60% {
+    @include rotateX(0deg);
+  }
+  80% {
+    @include rotateX(30deg);
+  }
+  90% {
+    @include rotateX(0deg);
+    opacity: 1;
+    font-size: 35px;
+  }
+  100% {
+    @include rotateX(0deg);
+    opacity: 0;
+    font-size: 0;
+  }
+}*/
+
+/*
+@include keyframes(heightMore) {
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 100%;
+  }
+}*/
+//@include background-image(linear-gradient(to bottom, rgb(63, 56, 85), #251c3a));

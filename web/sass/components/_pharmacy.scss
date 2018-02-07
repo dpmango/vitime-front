@@ -1,0 +1,560 @@
+@charset "UTF-8";
+#pharmacy {
+  background: #f8f8f8;
+}
+
+#pharmacy-map {
+  height: 400px;
+  width: 100%;
+  @include breakpoint($small-min) {
+  }
+  @include breakpoint($small) {
+    height: 450px;
+  }
+  @include breakpoint($medium) {
+    height: 500px;
+  }
+  @include breakpoint($large) {
+    height: 550px;
+  }
+  @include breakpoint($large-xl) {
+    height: 650px;
+  }
+}
+
+.hd-pharmacy {
+  background-image: url("/img/pharmacy/header.jpg");
+  @extend .bg-cover;
+}
+
+.tlt-map {
+  font-size: 0.75em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  max-width: 400px;
+  @extend .Roboto_Medium;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    //font-size: .8em;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#local {
+  width: 250px;
+  padding: 9px 15px;
+  font-size: 1em;
+  color: $color-txt;
+  border: 1px solid #d4d4d4;
+  outline: none;
+  @extend .MyriadPro-Regular;
+
+}
+
+/*Аптеки*/
+.list-ap-it {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    text-align: left;
+    padding-left: 50px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-ap-it li {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-right: 25px;
+    margin-bottom: 25px;
+  }
+  @include breakpoint($large) {
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-ap-it li img {
+  height: 40px;
+  width: auto;
+  display: inline-block;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    height: 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-ap-it.spec-ap li img {
+  height: 37px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    height: 43px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+.list-ap-it.spec-ap li.spec-img-m img {
+  height: 45px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    height: 50px;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    height: 55px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+.list-ap-it li a {
+  text-align: center;
+  color: $color-txt;
+  font-size: 1em;
+  @extend .MyriadPro-Regular;
+}
+
+.list-ap-it li a span {
+  margin-top: 10px;
+  display: block;
+  clear: both;
+}
+
+.list-ap-ph {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 30px;
+  margin: 30px 0 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-bottom: 40px;
+    margin: 30px 0 0;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.txt-right-ph {
+  text-align: center;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    text-align: right;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.txt-left-ph {
+  text-align: center;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    text-align: left;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/*.list-ap-ph::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
+  height: 1px;
+  border-bottom: 1px dotted #c6c6c6;
+}*/
+
+.list-ap-ph .col-6-l {
+  padding-top: 25px;
+  text-align: center;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    text-align: right;
+    padding: 30px 50px 0 0;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.tlt-pr {
+  color: $color-h;
+  text-transform: uppercase;
+  font-size: 1em;
+  @extend .HouschkaPro-Bold;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.pad-def-ph {
+  padding-bottom: 45px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-bottom: 60px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Сheckbox
+***********************************************/
+.r-bl-ph {
+  width: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    @include grid-span(6, 7);
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.l-bl-ph {
+  width: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    @include grid-span(6, 1);
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#checkbox-map {
+  text-align: center;
+  margin-top: 10px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    margin-top: 0px;
+    text-align: left;
+  }
+  @include breakpoint($medium) {
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#checkbox-map input {
+  position: absolute;
+  left: -9999px;
+}
+
+#checkbox-map label {
+  display: inline-block;
+  position: relative;
+  padding: 13px 18px 13px 50px;
+  border: 1px solid #d4d4d4;
+  border-radius: 100px;
+  color: $color-txt;
+  background-color: #fff;
+  -moz-osx-font-smoothing: grayscale;
+  white-space: nowrap;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  user-select: none;
+  @extend .Roboto_Medium;
+  @extend .transition-all;
+}
+
+#checkbox-map label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  width: 25px;
+  border: 1px solid #d4d4d4;
+  border-radius: 100px;
+  background: #f8f8f8;
+  transition: background-color .2s;
+}
+
+#checkbox-map label:first-of-type {
+  // transform: translateX(-40px);
+}
+
+#checkbox-map label:last-of-type {
+  //transform: translateX(40px);
+}
+
+#checkbox-map label:hover, input:focus + label {
+  //box-shadow: 0 0 20px rgba(0, 0, 0, .6);
+  //border-color: $body-sc;
+}
+
+$chek-map: #3c3e58;
+;
+/*#checkbox-map input:checked + label {
+  background-color: $chek-map;
+  border-color: $chek-map;
+  color: #fff;
+}*/
+
+#checkbox-map input:checked + label::before {
+  background-color: $chek-map;
+  border-color: $chek-map;
+}
+
+/***********************************************
+Num
+***********************************************/
+.num-ph {
+  background-image: url("/img/svg-min/map-bg.svg");
+  @extend .bg-contain;
+}
+
+/***********************************************
+New style
+***********************************************/
+.first-sl {
+  margin-top: 15px;
+}
+
+.bl-sale-n {
+  position: relative;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding-left: 230px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bl-sale-n::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dotted #b1b1b1;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    left: 230px;
+    bottom: 0;
+    width: 70%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.pos-ab-txt {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #808080;
+  text-align: center;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    text-align: left;
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.list-ap-it li img:hover {
+  transform: scale(1.02);
+  @extend .transition-transform;
+}
+
+.cursor-def {
+  cursor: not-allowed;
+}
+
+.br-sl br {
+  display: none;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    display: inline-block;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}

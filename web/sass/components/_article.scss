@@ -1,0 +1,338 @@
+/***********************************************
+BG NUM
+***********************************************/
+.wh-num {
+  height: 130px;
+  width: 130px;
+}
+
+/***********************************************
+Article
+***********************************************/
+.hd-article {
+  background-image: url("/img/article/header2.jpg");
+  @extend .bg-cover;
+}
+
+.hd-article-f {
+  background-image: url("/img/article/header-ful.jpg");
+  @extend .bg-cover;
+}
+
+.num-article {
+  background-image: url("/img/svg-min/article-bg.svg");
+  background-position: top;
+  @extend .bg-contain;
+}
+
+.num-article-f {
+  background-position: top;
+  margin-top: -5px;
+  background-image: url("/img/svg-min/question-f.svg");
+  @extend .bg-contain;
+}
+
+.wr-article-all {
+  margin-top: 20px;
+  width: 100%;
+  /*  column-count: 3;
+    column-gap: 40px;*/
+  // column-rule: 1px solid #efefef;
+}
+
+.item-art {
+  border: 1px solid #eeeeee;
+  margin-bottom: 20px;
+}
+
+.item-art h3 {
+  display: inline-block;
+  position: relative;
+  color: $color-h;
+  font-size: 1.2em;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  @extend .Roboto_Medium;
+}
+
+.item-art h3::after {
+  background: #d9d9d9;
+  @extend .after-ab-100-1;
+}
+
+.item-art p {
+  line-height: 1.35;
+  margin-bottom: 0;
+}
+
+.wr-art-txt h4 {
+  display: inline-block;
+  width: 100%;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+  color: darken($color-txt, 5%);
+  font-weight: normal;
+  -moz-osx-font-smoothing: grayscale;
+  @extend .Roboto_Medium;
+  @extend .clearfix;
+}
+
+.next-art {
+  font-size: .7em;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: #bfbfbf;
+  @extend .Roboto_Medium;
+}
+
+.wr-art-txt {
+  background: #fff;
+  padding: 30px 30px 65px;
+}
+
+.foot-art {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 25px;
+  text-align: right;
+  // background: #e7e7e7;
+  background: #474B6D;
+}
+
+.wr-art-txt .foot-art data {
+  color: #fdfdfd;
+}
+
+.wr-art-txt .foot-art span {
+  color: #fdfdfd;
+  font-size: 0.7em;
+  float: left;
+}
+
+/***********************************************
+Full Article
+***********************************************/
+.ful-art-wr {
+  width: 100%;
+  margin: 0 auto;
+  @include breakpoint($small-min) {
+    width: 90%;
+  }
+  @include breakpoint($small) {
+    width: 80%;
+  }
+  @include breakpoint($medium) {
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    width: 70%;
+  }
+}
+
+.ful-art-wr h4 {
+  color: lighten($color-h, 10%);
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  line-height: 1.2;
+  @extend .Roboto_Medium
+}
+
+.ful-art-wr h4 span {
+  margin-right: 5px;
+}
+
+.ful-art-wr img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    max-width: 60%;
+    float: right;
+    height: auto;
+    margin: 0 0 30px 30px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.tlt-section.tlt-art-f {
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.tlt-section.tlt-art-f::after {
+  @extend .after-ab-50;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    background: #e2e2e2;
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Link Article
+***********************************************/
+.item-art:hover .lk-art {
+  opacity: 1;
+}
+
+.item-art .full-img {
+  @extend .transition-all-def;
+}
+
+.item-art:hover .full-img {
+  transform: scale(1.1);
+}
+
+.lk-art {
+  @extend .p-a-100;
+  background: rgba(237, 237, 237, 0.75);
+  overflow: hidden;
+  text-align: center;
+  opacity: 0;
+  @extend .transition-opacity;
+}
+
+/***********************************************
+News
+***********************************************/
+.hd-news {
+  background-image: url("/img/news/header1.jpg");
+  @extend .bg-cover;
+}
+
+.num-news {
+  background-image: url("/img/svg-min/news-bg.svg");
+  background-position: top;
+  @extend .bg-contain;
+}
+
+.bg-nw-img {
+  // background: rgba(51, 54, 91, 0.5);
+  @extend .p-a-100;
+}
+
+.tlt-news {
+  display: inline-block;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  // letter-spacing: -0.5px;
+  // text-transform: uppercase;
+  @extend .Roboto_Medium;
+}
+
+.tlt-news::after {
+  background: #a9a9a9;
+  @extend .after-ab-100-1;
+}
+
+.pad-news {
+  padding: 50px 45px 65px;
+}
+
+.it-new {
+  border: 1px solid #ededed;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.news-list p {
+  margin-bottom: 0;
+}
+
+/***********************************************
+Date News
+***********************************************/
+.date-news {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ececec;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+}
+
+.date-news data, .date-news span, .foot-art data, .foot-art span {
+  display: inline-block;
+  color: $color-txt;
+  text-transform: uppercase;
+  font-size: .85em;
+  -moz-osx-font-smoothing: grayscale;
+  @extend .Roboto_Medium;
+}
+
+.date-news span {
+  font-size: 0.75em;
+}
+
+.bookmark {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 20px;
+  height: 25px;
+  background-image: url("/img/svg-min/bookmark.svg");
+  @extend .bg-contain;
+}
+
+.read-more {
+  display: inline-block;
+  position: relative;
+  color: $color-h;
+  font-size: 1em;
+  margin-top: 10px;
+  cursor: pointer;
+  padding-right: 15px;
+  @extend .MyriadPro-Regular;
+}
+
+.read-more::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 3px;
+  width: 10px;
+  height: 10px;
+  @extend .bg-contain;
+}
+
+.read-more.down::after {
+  background-image: url("/img/svg-min/read-lmore.svg");
+}
+
+.read-more.up::after {
+  background-image: url("/img/svg-min/read-less.svg");
+}

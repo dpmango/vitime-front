@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "HouschkaPro-Bold";
+  src: url("/dist/css/fonts/HouschkaPro-Bold/HouschkaPro-Bold.eot");
+  src: url("/dist/css/fonts/HouschkaPro-Bold/HouschkaPro-Bold.eot?#iefix") format("embedded-opentype"),
+  url("/dist/css/fonts/HouschkaPro-Bold/HouschkaPro-Bold.woff") format("woff"),
+  url("/dist/css/fonts/HouschkaPro-Bold/HouschkaPro-Bold.ttf") format("truetype"),
+  url("/dist/css/fonts/HouschkaPro-Bold/HouschkaPro-Bold.svg#false") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HouschkaPro-ExtraBold";
+  src: url("/dist/css/fonts/HouschkaPro-ExtraBold/HouschkaPro-ExtraBold.eot");
+  src: url("/dist/css/fonts/HouschkaPro-ExtraBold/HouschkaPro-ExtraBold.eot?#iefix") format("embedded-opentype"),
+  url("/dist/css/fonts/HouschkaPro-ExtraBold/HouschkaPro-ExtraBold.woff") format("woff"),
+  url("/dist/css/fonts/HouschkaPro-ExtraBold/HouschkaPro-ExtraBold.ttf") format("truetype"),
+  url("/dist/css/fonts/HouschkaPro-ExtraBold/HouschkaPro-ExtraBold.svg#false") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*@font-face {
+  font-family: "HouschkaPro-Light";
+  src: url("/dist/css/fonts/HouschkaPro-Light/HouschkaPro-Light.eot");
+  src: url("/dist/css/fonts/HouschkaPro-Light/HouschkaPro-Light.eot?#iefix") format("embedded-opentype"),
+  url("/dist/css/fonts/HouschkaPro-Light/HouschkaPro-Light.woff") format("woff"),
+  url("/dist/css/fonts/HouschkaPro-Light/HouschkaPro-Light.ttf") format("truetype"),
+  url("/dist/css/fonts/HouschkaPro-Light/HouschkaPro-Light.svg#false") format("svg");
+  font-weight: lighter;
+  font-style: normal;
+}*/
+
+@font-face {
+  font-family: "HouschkaPro-Medium";
+  src: url("/dist/css/fonts/HouschkaPro-Medium/HouschkaPro-Medium.eot");
+  src: url("/dist/css/fonts/HouschkaPro-Medium/HouschkaPro-Medium.eot?#iefix") format("embedded-opentype"),
+  url("/dist/css/fonts/HouschkaPro-Medium/HouschkaPro-Medium.woff") format("woff"),
+  url("/dist/css/fonts/HouschkaPro-Medium/HouschkaPro-Medium.ttf") format("truetype"),
+  url("/dist/css/fonts/HouschkaPro-Medium/HouschkaPro-Medium.svg#false") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url("/dist/css/fonts/MyriadPro-Regular/MyriadPro-Regular.eot");
+  src: url("/dist/css/fonts/MyriadPro-Regular/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"),
+  url("/dist/css/fonts/MyriadPro-Regular/MyriadPro-Regular.woff") format("woff"),
+  url("/dist/css/fonts/MyriadPro-Regular/MyriadPro-Regular.ttf") format("truetype"),
+  url("/dist/css/fonts/MyriadPro-Regular/MyriadPro-Regular.svg#false") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+/*@font-face {
+  font-family: "MyriadPro-Semibold";
+  src: url("Myriad_Semibold.eot");
+  src: url("/dist/css/fonts/MyriadPro-SemiBold/Myriad_Semibold.eot?#iefix") format("embedded-opentype"),
+  url("/dist/css/fonts/MyriadPro-SemiBold/Myriad_Semibold.woff2") format("woff2"),
+  url("/dist/css/fonts/MyriadPro-SemiBold/Myriad_Semibold.woff") format("woff"),
+  url("/dist/css/fonts/MyriadPro-SemiBold/Myriad_Semibold.ttf") format("ttf"),
+  url("/dist/css/fonts/MyriadPro-SemiBold/Myriad_Semibold.svg#MyriadPro-SemiboldSemiExt") format("svg");
+  font-style: normal;
+  font-weight: 500;
+}*/
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('/dist/css/fonts/Roboto/robotobold.woff2') format('woff2'), url('/dist/css/fonts/Roboto/robotobold.woff') format('woff'), url('/dist/css/fonts/Roboto/robotobold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('/dist/css/fonts/Roboto/robotomedium.woff2') format('woff2'), url('/dist/css/fonts/Roboto/robotomedium.woff') format('woff'), url('/dist/css/fonts/Roboto/robotomedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+/*@font-face {
+  font-family: 'Roboto';
+  src: url('/dist/css/fonts/Roboto/roboto.woff2') format('woff2'), url('/dist/css/fonts/Roboto/roboto.woff') format('woff'), url('/dist/css/fonts/Roboto/roboto.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}*/
+
+/***********************************************
+Global
+***********************************************/
+p {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  margin-bottom: 20px;
+  color: $color-txt;
+  line-height: 1.45;
+  font-size: 1em;
+  -moz-osx-font-smoothing: grayscale;
+}
+p b,h5 b{
+  font-weight: 600;
+  //color: $color-txt;
+  -moz-osx-font-smoothing: grayscale;
+}
+span {
+  display: inline-block;
+}
+h1, h2,h3,h4,h5,h6, h6 span{
+  -moz-osx-font-smoothing: grayscale;
+}
+/***********************************************
+Section
+***********************************************/
+#sec-1 p {
+  margin-bottom: 10px;
+}
+

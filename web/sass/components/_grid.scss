@@ -1,0 +1,580 @@
+.col-6-l {
+  @include grid-span(12, 1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    @include grid-span(6, 1);
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.col-6-r {
+  @include grid-span(12, 1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    @include grid-span(6, 7);
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.col-l-d {
+  @include grid-span(12, 1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    @include grid-span(7, 1);
+  }
+  @include breakpoint($large) {
+    padding-left: 100px;
+    height: 100%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.col-r-d {
+  //@include grid-span(12, 1);
+  //@include translateY(-100px);
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    position: relative;
+    @include grid-span(5, 8);
+    //@include translateY(0);
+    height: 100%;
+    left: auto;
+    bottom: auto;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.col-r-d.bod-sck {
+  bottom: -60px;
+  @include breakpoint($small-min) {
+    bottom: -70px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    position: relative;
+    @include grid-span(5, 8);
+    height: 100%;
+    left: auto;
+    bottom: auto;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-in-imr.body-sculpture-in {
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    bottom: -80px;
+    margin-top: 0;
+    right: -50px;
+  }
+  @include breakpoint($large) {
+    bottom: -90px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.col-l-d-r {
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  // @include grid-span(12, 1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    @include grid-span(5, 1);
+    height: 100%;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.col-r-d-r {
+
+  @include grid-span(12, 1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    @include grid-span(7, 6);
+    padding-left: 30px;
+    height: 100%;
+  }
+  @include breakpoint($large) {
+    padding-left: 100px;
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+WHY
+***********************************************/
+.l-bl {
+  position: relative;
+  @include grid-span(12, 1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    @include grid-span(6, 1);
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.r-bl {
+  position: relative;
+  @include grid-span(12, 1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    @include grid-span(6, 7);
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.p-l-bl {
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-right: 50px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.p-r-bl {
+
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-left: 50px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.emp-img1 {
+  height: 300px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    height: auto;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+3 Col
+***********************************************/
+
+.colnl {
+  @include grid-span(5, 1);
+}
+
+.colnr {
+  @include grid-span(7, 6);
+}
+
+/***********************************************
+new Media
+***********************************************/
+.bl-1-1 {
+  padding: 40px 0 50px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 100px 0 0;
+  }
+  @include breakpoint($large) {
+    padding: 100px 0 80px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+
+}
+
+.mobile-dr-all {
+  width: 100%;
+  text-align: center;
+  padding: 60px 0 0;
+  background: #f7f7f7;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    display: none;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.mobile-dr-all img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.t-b-l-sec {
+  // padding-bottom: 140px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    // padding: 0;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bl-index {
+  height: 690px;
+  @include breakpoint($small-min) {
+    height: 605px;
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    height: 500px;
+  }
+  @include breakpoint($large) {
+    height: 570px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bl-index2 {
+  height: 670px;
+  @include breakpoint($small-min) {
+    height: 620px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    height: 500px;
+  }
+  @include breakpoint($large) {
+    height: 570px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bl-index4 {
+  height: 580px;
+  @include breakpoint($small-min) {
+    //height: 590px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    height: 500px;
+  }
+  @include breakpoint($large) {
+    height: 570px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bl-index3 {
+  height: 680px;
+  @include breakpoint($small-min) {
+    height: 595px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    height: 500px;
+  }
+  @include breakpoint($large) {
+    height: 570px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bl-index5 {
+  height: 630px;
+  @include breakpoint($small-min) {
+    height: 595px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    height: 550px;
+  }
+  @include breakpoint($large) {
+    height: 570px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bl-index6 {
+  height: 700px;
+  @include breakpoint($small-min) {
+    height: 600px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    height: 550px;
+  }
+  @include breakpoint($large) {
+    height: 570px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.container-ph {
+  padding: 0 20px;
+  max-width: $max-width-container;
+  margin: 0 auto;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 0 30px;
+  }
+  @include breakpoint($large) {
+    padding: 0 50px;
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.img-dr-in {
+  max-width: 300px;
+  z-index: 3;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 350px;
+    max-width: none;
+  }
+  @include breakpoint($large) {
+    width: 390px;
+  }
+  @include breakpoint($large-xl) {
+    max-width: 450px;
+    width: 100%;
+  }
+}
+
+.img-big {
+  margin-right: -20px;
+  transform: translateX(20px);
+  width: 90%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 80%;
+    transform: translateX(0);
+  }
+  @include breakpoint($large) {
+    width: 85%;
+    transform: translateX(-20px);
+  }
+  @include breakpoint($large-xl) {
+    width: 82%;
+  }
+}
+
+.txt-right-dr {
+  text-align: center;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    text-align: right;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.mix-media {
+  margin-top: 40px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-top: 0;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}

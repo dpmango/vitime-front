@@ -1,0 +1,658 @@
+$bg-comments: #363a5c;
+$bg-rew: #474B6D; //rgba(255, 255, 255, 0.05);
+$bg-rew-l: darken($bg-rew, 2%);
+$bor-rew: rgba(255, 255, 255, 0.06);
+.comment-dr {
+  background: $bg-comments;
+  @include background-image(linear-gradient(to bottom, #363a5c, #414569));
+  // background-image: radial-gradient(50% 109%, #444972 47%, #363A5C 100%);
+}
+
+.comment-all {
+  @include background-image(linear-gradient(to bottom, #ededed, #e6e6e6));
+}
+
+.comment {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.comment-img {
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    display: inline-block;
+    float: left;
+    margin-right: 58px;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.comment-img img {
+  display: block;
+  width: 40px;
+  opacity: .4;
+  @include breakpoint($medium) {
+    width: 70px;
+  }
+}
+
+.comment-body {
+  overflow: hidden;
+  padding-bottom: 20px;
+  @include breakpoint($medium) {
+    padding-bottom: 30px;
+  }
+  @include breakpoint($large) {
+    padding-bottom: 35px;
+  }
+}
+
+.comment .text {
+  padding: 35px 30px 30px;
+  border-top: 1px solid $bor-rew;
+  border-right: 1px solid $bor-rew;
+  border-left: 1px solid $bor-rew;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  background: $bg-rew;
+  @extend .transition-bg;
+}
+
+.comment .text:hover {
+  background: $bg-rew-l;
+}
+
+.comment .text a {
+  position: relative;
+  display: inline-block;
+  font-size: 0.9em;
+  margin-top: -5px;
+  padding-bottom: 4px;
+  // opacity: .9;
+  // color: #fbfbfb;
+  margin-bottom: 13px;
+  -moz-osx-font-smoothing: grayscale;
+  @extend .Roboto_Medium;
+  @extend .transition-opacity;
+}
+
+.comment .text a::after {
+  background: rgba(255, 255, 255, 0.2);
+  @extend .after-ab-100-1;
+}
+
+/*.comment.bg-od .text {
+  background: $bg-rew;
+}*/
+
+.comment.bg-en .text {
+  background: $bg-rew-l;
+}
+
+.comment .text > p {
+  position: relative;
+
+}
+
+.comment .text > p::after, .comment .text > p::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: .4;
+  @extend .bg-contain;
+}
+
+.comment .text > p::after {
+  top: -7px;
+  right: -10px;
+  background-image: url("/img/svg-min/quotes-r.svg");
+}
+
+.comment .text > p::before {
+  bottom: -7px;
+  left: -10px;
+  background-image: url("/img/svg-min/quotes-l.svg");
+}
+
+.comment .text p:last-child {
+  margin: 0;
+}
+
+.attribution {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  font-size: 0.75em;
+  padding: 15px 20px;
+  background: darken($bg-comments, 1%);
+  // @include background-image(linear-gradient(to bottom, #363a5c, #414569));
+  @extend .Roboto_Medium;
+  @include breakpoint($small-min) {
+    font-size: .8em;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: 0.9em;
+    padding: 0 30px;
+    line-height: 40px;
+    height: 40px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.attribution::after {
+  content: '';
+  border-bottom: 1px solid darken($bg-comments, 1%);
+  border-left: 1px solid darken($bg-comments, 1%);
+  border-right: 1px solid darken($bg-comments, 1%);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  z-index: 2;
+  @extend .p-a-100;
+
+}
+
+.comment-date {
+  float: right;
+  font-size: 95%;
+
+}
+
+/* Decoration */
+
+.comments {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    width: 90%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.comment {
+  position: relative;
+}
+
+.comments::before, .comment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 65px;
+  @include breakpoint($medium) {
+    left: 95px;
+  }
+}
+
+.comments::before {
+  @include breakpoint($small) {
+    width: 2px;
+    top: 20px;
+    // bottom: 0;
+    height: calc(100% - 55px);
+    // background-color: rgba(255, 255, 255, 0.3);
+    @include background-image(linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)));
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#old-br .comments::before {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*.comments::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 64px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  @include breakpoint($medium) {
+    left: 105px;
+  }
+}*/
+.comment::before {
+  @include breakpoint($small) {
+    width: 15px;
+    height: 15px;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    margin: 14px 0 0 -7px;
+    //  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    background: $body-sc;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.comment:hover:before {
+  background: darken($bg-comments, 1%);
+}
+
+.comment .text::before {
+  @extend .transition-bg;
+  @include breakpoint($small) {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 90px;
+    width: 16px;
+    height: 16px;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: $bor-rew;
+    transform: rotate(45deg);
+    background: $bg-rew;
+  }
+  @include breakpoint($medium) {
+    left: 122px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.comment .text:hover::before {
+  background: $bg-rew-l;
+}
+
+.comment .text.text-bg-c::before {
+  background: #fff;
+}
+
+/***********************************************
+Header
+***********************************************/
+.hd-comment {
+  background-image: url("/img/review/header.jpg");
+  @extend .bg-cover;
+}
+
+.num-com {
+  background-image: url("/img/svg-min/icon-com.svg");
+  @extend .bg-contain;
+}
+
+.wr-btn-com {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  //padding-left: 130px;
+}
+
+/***********************************************
+Question Answer
+***********************************************/
+
+.que1 {
+  @include grid-span(12, 1);
+}
+
+.que2 {
+  margin-top: 20px;
+  @include grid-span(11, 2);
+  @include breakpoint($small-min) {
+    @include grid-span(10, 3);
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    @include grid-span(11, 2);
+  }
+}
+
+.hd-question {
+  background-image: url("/img/vopros/header.jpg");
+  @extend .bg-cover;
+}
+
+.question-wr {
+  margin-top: 30px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-left: 100px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.num-vop {
+  background-image: url("/img/svg-min/vopros-bg.svg");
+  @extend .bg-contain;
+}
+
+.question-wr section {
+  margin-bottom: 45px;
+  // overflow: hidden;
+}
+
+.que1 h5 {
+  // color: darken($color-h,10%);
+  font-size: 1em;
+  line-height: 1.3;
+  @extend .color-w-lt;
+  @extend .MyriadPro-Regular;
+}
+
+#question-list p {
+  line-height: 1.3;
+  margin-bottom: 0;
+  color: darken($color-txt, 3%);
+}
+
+.pad-bor-que {
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+//$bg-qu: #e9e9e9;
+$bg-qu: $bg-rew;
+.bg-q1 {
+  padding: 30px 25px 30px 35px;
+  // background: #e9e9e9;
+  background: $bg-qu;
+  border-color: darken($bg-qu, 3%);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 30px 35px 30px 45px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bg-q2 {
+  padding: 35px 25px 75px 35px;
+  background: #fff;
+  border-color: #e9e9e9;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 30px 35px 70px 45px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.que2::after {
+  content: '';
+  position: absolute;
+  left: -75px;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  background-image: url("/img/svg-min/question.svg");
+  @extend .bg-contain;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    opacity: 0.6;
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Icon Question Answer
+***********************************************/
+.que-ic {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: .8;
+  @extend .bg-contain;
+}
+
+.q-gu {
+  background-image: url("/img/svg-min/icon-v1-w.svg");
+}
+
+.q-an {
+  background-image: url("/img/svg-min/icon-v2.svg");
+}
+
+/***********************************************
+Tag Question Answer
+***********************************************/
+.wr-tag-fo {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 15px;
+  text-align: right;
+  background: #f0f0f0;
+}
+
+#question-list .wr-tag-fo a {
+  display: inline-block;
+  font-size: 0.75em;
+  padding-right: 20px;
+  -moz-osx-font-smoothing: grayscale;
+  @extend .Roboto_Medium;
+}
+
+#question-list .wr-tag-fo a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 15px;
+  height: 15px;
+  @extend .bg-contain;
+
+}
+
+#question-list .wr-tag-fo a.b-body-sculpture::after {
+  background-image: url("/img/svg-min/tag-bd.svg");
+}
+
+#question-list .wr-tag-fo a.b-arthro::after {
+  background-image: url("/img/svg-min/tag-ar.svg");
+}
+
+#question-list .wr-tag-fo a.b-energy-power::after {
+  background-image: url("/img/svg-min/tag-ep.svg");
+}
+
+#question-list .wr-tag-fo a.b-isotonic::after {
+  background-image: url("/img/svg-min/tag-is.svg");
+}
+
+#question-list .wr-tag-fo a.b-energy-tonic::after {
+  background-image: url("/img/svg-min/tag-et.svg");
+}
+
+#bt-faqs-more {
+  width: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#def-btn-l {
+  width: auto;
+}
+
+/***********************************************
+Modal
+***********************************************/
+.wr-tlt-mod {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wr-tlt-mod p {
+  line-height: 1.2;
+  color: darken($color-txt, 5%);
+}
+
+.remodal h2 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: $color-h;
+  -moz-osx-font-smoothing: grayscale;
+  @extend .Roboto_Bold;
+}
+
+.remodal {
+  padding-bottom: 60px;
+}
+
+.remodal .btn-contact {
+  margin-top: 25px;
+}
+
+.btnb-qe {
+  display: none;
+  @include breakpoint($small-min) {
+    display: inline-block;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.flo-rt-qe {
+  @include breakpoint($small-min) {
+    float: right;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-fil-mob {
+  @include breakpoint($small-min) {
+    margin-top: 40px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    margin-top: 0;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}

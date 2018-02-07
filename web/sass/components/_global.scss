@@ -1,0 +1,4318 @@
+@charset "UTF-8";
+/***********************************************
+Global
+***********************************************/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  // -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  // display: flex;
+  min-height: 100vh;
+  height: 100%;
+  //text-rendering:optimizeLegibility;
+  // flex-direction: column;
+  background: #f9f9f9;
+}
+
+#main-wrapper {
+  display: block;
+  width: 100%;
+  max-width: $max-width-site;
+  min-width: $min-width-site;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #fff;
+  @include breakpoint($large-xxxl) {
+    @include box-shadow-2(3px 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15));
+  }
+}
+
+#main-content {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  //flex: 1 0 auto;
+
+}
+
+.row {
+  margin: 0 auto;
+  max-width: $max-width-site;
+  @include clearfix;
+  width: 100%;
+  position: relative;
+
+}
+
+.container {
+  width: 100%;
+  max-width: $max-width-container;
+  min-width: $min-width-site;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include breakpoint($small-min) {
+    padding: 0 35px;
+  }
+  @include breakpoint($small) {
+    padding: 0 40px;
+  }
+  @include breakpoint($medium) {
+    padding: 0 45px;
+  }
+  @include breakpoint($large) {
+    padding: 0 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Hover Fon Menu
+***********************************************/
+/*#fon-hover-menu {
+  //display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: 50;
+  opacity: 0;
+  overflow: hidden;
+  background: rgba(61, 64, 99, 0.6);
+  @extend .transition-opacity;
+}*/
+
+/*#fon-hover-menu.active {
+  width: 100%;
+  opacity: 1;
+}*/
+
+/***********************************************
+Header Slider
+***********************************************/
+.header-container {
+  background: #e5e5e5;
+}
+
+.hd-sec {
+  @extend .w-h-100;
+}
+
+.hd-sec-bg-1 {
+  background: url("/img/header/header-index11.jpg") no-repeat center;
+  //frontend/web/img/mobile/header/main.jpg
+  background-size: cover;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: url("/img/header/header-index11.jpg") no-repeat center;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.dr-all-index {
+  display: none;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    position: absolute;
+    display: inline-block;
+    left: auto;
+    right: -40px;
+    width: 80%;
+    bottom: -55px;
+  }
+  @include breakpoint($large) {
+    // width: 600px;
+    // width: 80%;
+    bottom: -75px;
+  }
+  @include breakpoint($large-xl) {
+    width: 83%;
+    bottom: -85px;
+  }
+}
+
+.dr-item-head {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 40%;
+  bottom: 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    display: inline-block;
+    right: 0;
+    width: 300px;
+    bottom: -80px;
+    margin-right: -20px;
+  }
+  @include breakpoint($large) {
+    width: 350px;
+    bottom: -90px;
+  }
+  @include breakpoint($large-xl) {
+    width: 33%;
+    bottom: -18%;
+  }
+}
+
+.ver-cen-hd {
+  padding-top: 165px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-top: 175px;
+  }
+  @include breakpoint($large) {
+    padding-top: 20%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.ver-cen-hd.has-video {
+  padding-top: 160px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-top: 170px;
+  }
+  @include breakpoint($large) {
+    padding-top: 18%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.ver-cen-hd-sec {
+  padding-top: 130px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    padding-top: 19%;
+  }
+}
+
+/***********************************************
+Fotorama Top Index end Center fotorama__loaded
+***********************************************/
+/*#index{
+  @include scale(1.02);
+  @include transition(transform 1s .2s);
+}
+#index.is-loaded{
+  @include scale(1);
+}*/
+.fotorama-top {
+  background: #f4f4f4;
+}
+
+#index .fotorama, .wr-drugs {
+  position: relative;
+  height: 480px;
+  @include breakpoint($small-min) {
+  }
+  @include breakpoint($small) {
+  }
+  @include breakpoint($medium) {
+    height: 500px;
+  }
+  @include breakpoint($large) {
+    height: 550px;
+  }
+  @include breakpoint($large-xl) {
+    height: 600px;
+  }
+}
+
+.fot-cen-m {
+  margin-top: 100px;
+  margin-bottom: 170px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-top: 70px;
+    margin-bottom: 80px;
+  }
+  @include breakpoint($large) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.nav_sl_cen {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -67px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    bottom: 40px;
+    right: 50px;
+    left: auto;
+    margin-left: 0;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.nav-list-cen li {
+  position: relative;
+  display: inline-block;
+  color: $color-txt;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 5px;
+  opacity: .7;
+  padding-bottom: 2px;
+  @extend .transition-all;
+  @extend .Roboto_Medium;
+}
+
+.nav-list-cen li:hover, .nav-list-cen li.active {
+  opacity: 1;
+}
+
+.nav-list-cen li.active::after {
+  background: $color-txt;
+  @extend .after-ab-100-1;
+}
+
+.arrow-cen svg {
+  width: 17px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.nav-list-cen .prev-cen {
+  margin-right: 5px;
+}
+
+/*TXT*/
+.logo-sl-cen {
+  width: 80%;
+  margin: -10px auto 0;
+  text-align: center;
+  @include breakpoint($small-min) {
+    margin-top: -30px;
+  }
+}
+
+.logo-cen-img {
+  display: inline-block;
+  width: 150px;
+  height: auto;
+  opacity: 0;
+  // @include translate(-200px, 0);
+  @extend .transition-all-up;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 170px;
+
+  }
+  @include breakpoint($large) {
+    width: 220px;
+  }
+  @include breakpoint($large-xl) {
+    width: 290px;
+  }
+}
+
+/*.logo-cen-img.active{
+  @include translate(0, 0);
+  opacity: 1;
+}*/
+/*.sl-2 .logo-cen-img {
+
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    margin-left: -40%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}*/
+
+.fotorama__wrap--fade .fotorama__fade-rear.fotorama__active .logo-cen-img {
+  @include translate(0, 0);
+  opacity: 1;
+}
+
+.txt-cen {
+  color: lighten($color-h, 5%);
+  font-size: 1em;
+  line-height: 1;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  display: none;
+  @extend .Roboto_Medium;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    display: inline-block;
+    font-size: 1.2em;
+  }
+  @include breakpoint($large) {
+    font-size: 1.4em;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.bg-txt-cen {
+  display: inline-block;
+  color: $color-h;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  padding: 6px 7px 4px;
+  margin: 0;
+  line-height: 1;
+  font-family: 'Roboto Bold', sans-serif;
+  //-moz-osx-font-smoothing: grayscale;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: 1.1em;
+    background: $color-h-b;
+    color: #fff;
+    font-family: "MyriadPro-Regular", sans-serif;
+  }
+  @include breakpoint($large) {
+    font-size: 1.3em;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-txt-cen-sl {
+  opacity: 0;
+  @include translate(70px, 0);
+  @extend .transition-all-up;
+  @include breakpoint($small-min) {
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    text-align: left;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/*.wr-txt-cen-sl.active{
+  @include translate(0, 0);
+  opacity: 1;
+}*/
+.fotorama__wrap--fade .fotorama__fade-rear.fotorama__active .wr-txt-cen-sl {
+  @include translate(0, 0);
+  opacity: 1;
+}
+
+/***********************************************
+New Fotorama Top
+***********************************************/
+.fotorama__nav-wrap {
+  display: block;
+  margin: 0 auto;
+  @include translate(0, -50px);
+  padding: 0 20px;
+  background: transparent;
+  height: 0;
+  max-width: $max-width-container;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 0 40px;
+    @include translate(0, -65px);
+  }
+  @include breakpoint($large) {
+    padding: 0 50px;
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.fotorama__dot {
+  display: inline-block;
+  position: relative;
+  opacity: 0.85;
+  color: darken(#fff, 10%);
+  @extend .transition-all;
+  @extend .Roboto_Medium;
+  font-size: 1em;
+  padding-bottom: 3px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/*.nav-fot-in-list ul li.active::after {
+  opacity: 0.6;
+  background: darken(#fff, 10%);;
+  @extend .after-ab-100-1;
+}*/
+/*.fotorama__nav__frame:focus .fotorama__dot:after {
+
+}
+
+.fotorama__nav__frame.fotorama__active .fotorama__dot {
+
+}*/
+
+.fotorama__nav__frame.fotorama__active .fotorama__dot:after {
+  opacity: 0.7;
+  background: darken(#fff, 10%);;
+  @extend .after-ab-100-1;
+}
+
+.fotorama__dot:hover, .fotorama__dot:hover::after, .fotorama__nav__frame.fotorama__active .fotorama__dot {
+  opacity: 1;
+}
+
+/*.fotorama__arr--next {
+  right: 2px;
+  width: 40px;
+  height: 20px;
+  background-image: url("/img/dashboard/next-fot.svg");
+ @extend .bg-contain;
+}*/
+
+.fotorama__arr {
+  // max-width: $max-width-site;
+  // margin: 0 auto;
+  //position: absolute;
+  /*  width: 32px;
+    height: 32px;
+    top: 50%;*/
+  // margin-top: -16px
+}
+
+/*.fotorama__arr--prev {
+  left: 2px;
+  background-position: 0 0
+}*/
+/////
+/*.nav-fot-in {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  padding-left: 50px;
+}*/
+
+/*.nav-fot-in-list ul, .nav-fot-in-list ul li {
+  display: inline-block;
+}*/
+
+/*.nav-fot-in-list ul li {
+  position: relative;
+  opacity: 0.85;
+  color: darken(#fff, 10%);
+  @extend .transition-all;
+  @extend .Roboto_Medium;
+  font-size: 0.95em;
+  padding-bottom: 3px;
+  margin-right: 8px;
+  cursor: pointer;
+}*/
+
+/*.nav-fot-in-list ul li:hover, .nav-fot-in-list ul li:hover::after {
+  opacity: 1;
+}*/
+
+/*.nav-fot-in-list ul li.active {
+  opacity: 1;
+}*/
+
+/*.nav-fot-in-list ul li.active::after {
+  opacity: 0.9;
+}*/
+
+/*Arrow*/
+.ar-sl {
+  @extend .transition-transform;
+}
+
+.ar-sl-r {
+  display: none;
+  padding-top: 3px;
+  cursor: pointer;
+  margin-left: 8px;
+  width: 25px;
+  height: 17px;
+  vertical-align: middle;
+  background-image: url("/img/dashboard/next-fot.svg");
+  @extend .bg-contain;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    display: inline-block;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/*.nav-fot-in-list .ar-sl svg {
+  fill: #fff;
+  opacity: .8;
+  width: 26px;
+  height: auto;
+  vertical-align: middle;
+}*/
+
+.ar-sl-r:hover, .search-txt a:hover::before {
+  @include translate(5px, 0);
+}
+
+/***********************************************
+Dashboard Index Top Header
+***********************************************/
+.wr-dash-phone {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+
+  z-index: 20;
+  @include breakpoint($small-min) {
+  }
+  @include breakpoint($small) {
+  }
+  @include breakpoint($medium) {
+    top: 75px;
+    right: 0;
+    margin-top: 10px;
+  }
+  @include breakpoint($large) {
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.ph-pos {
+  text-align: right;
+}
+
+/*.wr-dash-fot {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}*/
+
+/***********************************************
+Mouse Next
+***********************************************/
+/*
+.mouse-next {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  padding: 2px;
+
+}
+
+.mouse-next svg {
+  display: inline-block;
+  fill: #fff;
+  fill-opacity: .7;
+  width: 35px;
+  height: auto;
+}
+
+#n-mouse.active {
+  opacity: 0;
+  animation: next-mouse 1.5s infinite;
+  @include translate(0, 0);
+}
+
+@keyframes next-mouse {
+  0% {
+    @include translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    @include translate(0, 5px);
+  }
+}
+*/
+
+/***********************************************
+Navbar Fotorama Index
+***********************************************/
+
+/*Phone Top*/
+//# D0343A
+//$color-phone-top: #D0343A;
+$color-phone-top: #fff;
+/*.phone-top{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 101;
+}*/
+.phone-top a {
+  // position: absolute;
+  //top: 55px;
+  //left: 20px;
+  font-size: 1em;
+  z-index: 101;
+  opacity: .9;
+  color: $color-phone-top;
+  @extend .Roboto_Medium;
+  // @extend .easy-txt;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    //left: 50px;
+    // top: 65px;
+    font-size: 1em;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.ph-svg {
+  vertical-align: top;
+  width: 14px;
+  height: 14px;
+  fill: $color-phone-top;
+  margin-left: 3px;
+  /*  width: 18px;
+    height: 18px;
+    background: url("/img/svg-min/phone.svg") no-repeat center;
+    background-size: contain;*/
+}
+
+/***********************************************
+Index TXT Slider
+***********************************************/
+.wr-title-sl {
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.fotorama__loaded .wr-title-sl {
+  opacity: 0;
+}
+
+.fotorama__loaded.fotorama__active .wr-title-sl {
+  opacity: 1;
+}
+
+.index-tlt-logo {
+  font-size: 1.6em;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  -moz-osx-font-smoothing: grayscale;
+  @extend .HouschkaPro-Bold;
+  @include breakpoint($small-min) {
+    font-size: 2em;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: 2.3em;
+  }
+  @include breakpoint($large) {
+    font-size: 2.5em;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+TLT Slider Index
+***********************************************/
+
+.tlt-sl {
+  margin-right: 30px;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  // opacity: .9;
+  color: $color-title-sl-w;
+  @extend .HouschkaPro-Bold;
+}
+
+/***********************************************
+Sub TLT Slider
+***********************************************/
+.sub-tlt-sl {
+  font-size: 1em;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  //color: darken($color-title-sl-w, 5%);
+  @extend .MyriadPro-Regular;
+}
+
+/***********************************************
+Icon Index Section
+***********************************************/
+$color-icon-fill: #33353E;
+
+.stroke-f {
+  stroke-width: 1.2;
+}
+
+.stroke-l {
+  stroke-width: 0.5;
+}
+
+.stroke-col, .line-g {
+  stroke: $color-icon-fill;
+}
+
+.stroke-col .tonic-svg {
+  stroke: #38A9C7;
+}
+
+.stroke-col .sculpture-svg {
+  stroke: #d53e47;
+}
+
+.stroke-col .energy-svg {
+  stroke: #6a5781;
+}
+
+.cir-ic {
+  stroke-width: 1;
+  stroke: $color-icon-fill;
+}
+
+.dsafsa {
+  color: #e6ad49;
+}
+
+.svg-sec-ab {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.svg-sec .svg-index, .svg-sec-ab .svg-index {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+.svg-sec {
+  width: 122px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 40px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding-top: 0;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.footer-line {
+  display: inline-block;
+  width: 10px;
+  height: auto;
+}
+
+/***********************************************
+All Section Setting
+***********************************************/
+.num-sec {
+  z-index: 2;
+}
+
+.num-sec::before {
+  position: absolute;
+  top: 30px;
+  // font-size: 10em;
+  font-size: 160px;
+  //z-index: 0;
+  zoom: normal;
+  @extend .HouschkaPro-ExtraBold;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    // font-size: 15em;
+    font-size: 240px;
+  }
+  @include breakpoint($large) {
+    top: 30px;
+    // font-size: 20em;
+    font-size: 320px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.num-sec-02::before {
+  content: '02';
+  // left: 50px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    left: 100px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.num-sec-03::before {
+  content: '03';
+  // left: 30%;
+  color: rgba(255, 255, 255, 0.05);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    left: 100px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.num-sec-04::before {
+  content: '04';
+  left: 0;
+  color: rgba(255, 255, 255, 0.2);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    left: 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.num-sec-06::before {
+  content: '06';
+  left: 0;
+  color: rgba(255, 255, 255, 0.2);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    left: 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.num-sec-05::before {
+  content: '05';
+  left: 0;
+  color: rgba(255, 255, 255, 0.1);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    left: 30%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.num-sec-07::before {
+  content: '07';
+  // left: 30%;
+  color: rgba(255, 255, 255, 0.09);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    left: 100px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.tlt-bl-dr {
+  padding-top: 70px;
+  z-index: 2;
+  text-transform: uppercase;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-top: 100px;
+  }
+  @include breakpoint($large) {
+    /*   position: absolute;
+       bottom: 60px;
+       left: 0;
+       padding-top: 0;*/
+    padding-top: 60px;
+  }
+  @include breakpoint($large-xl) {
+    padding-top: 80px;
+  }
+}
+
+#energy_tonic .tlt-bl-dr {
+  top: 130px;
+}
+
+.tlt-bl-dr h2 {
+  font-size: 1.5em;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  @extend .Roboto_Bold;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: 1.7em;
+  }
+  @include breakpoint($large) {
+    font-size: 1.9em;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.info-tlt-wr {
+  position: relative;
+  margin: 0 30px 0 0;
+  display: inline-block;
+  z-index: 2;
+  float: left;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin: 0 50px 0 20px;
+    float: none;
+  }
+  @include breakpoint($large) {
+    padding-top: 50px;
+    margin: 0 100px 0 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.txt-c-l-info {
+  text-align: left;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    text-align: center;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.info-tlt-wr::after {
+  content: '01';
+  color: #ededed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10em;
+  z-index: -1;
+  @extend .HouschkaPro-ExtraBold;
+  @include breakpoint($medium) {
+    font-size: 15em;
+    left: -30px;
+    top: -45px;
+  }
+  @include breakpoint($large) {
+    font-size: 20em;
+    left: -70px;
+    top: -20px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+//
+.tlt-info-t {
+  font-size: 1.4em;
+  line-height: 1.1;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: Roboto Bold, sans-serif;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: 1.5em;
+  }
+  @include breakpoint($large) {
+    font-size: 1.75em;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.p-info {
+  font-size: 1em;
+  letter-spacing: .5px;
+  margin-bottom: 15px;
+  margin-top: 7px;
+  line-height: 1.2;
+  color: $color-txt;
+  text-transform: uppercase;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    font-size: 1.1em;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.tlt-bl-dr p {
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  line-height: 1.2;
+  @extend .MyriadPro-Regular;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    font-size: 1.1em;
+    margin-top: 5px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.name-dr {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  @extend .HouschkaPro-ExtraBold;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    font-size: 1.8em;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.name-dr .vit-name {
+  font-size: 145%;
+  text-transform: lowercase;
+  @extend .HouschkaPro-Bold;
+}
+
+.name-dr span {
+  text-transform: uppercase;
+  @extend .HouschkaPro-Medium;
+}
+
+.list-item-dr {
+  padding-top: 20px;
+  //padding-bottom: 100px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding-bottom: 0;
+    padding-top: 130px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/*.list-item-dr::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -1px;
+  width: 1px;
+  top: 0;
+  height: 100px;
+  background: transparent;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: rgba(255, 255, 255, 0.30);
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}*/
+
+.tlt-bl-dr li:not(.last-li) {
+  list-style: square inside;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  @extend .color-rew;
+  letter-spacing: 0.5px;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+  @extend .MyriadPro-Regular;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    font-size: 1em;
+  }
+}
+
+.tlt-bl-dr.wt-comp li:not(.last-li) {
+  @extend .color-w-lt;
+}
+
+.tlt-bl-dr li.li-empty {
+  list-style: none;
+  color: transparent;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tlt-bl-dr li.last-li {
+  margin-bottom: 15px;
+  font-size: 1em;
+  list-style: none;
+  -moz-osx-font-smoothing: grayscale;
+  @extend .Roboto_Bold;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    font-size: 1.2em;
+  }
+}
+
+.l-sec-l-r::after, .l-sec-l-r::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  top: 50%;
+  margin-top: -1px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0);
+  z-index: 5;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 25px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.l-sec-l-r::after {
+  left: 0;
+}
+
+.l-sec-l-r::before {
+  right: 0;
+}
+
+/*Name Drug Rotate*/
+.name-rotate {
+  display: none;
+  position: absolute;
+  top: 0;
+  color: rgba(49, 49, 55, 0);
+  font-size: 1em;
+  letter-spacing: 1px;
+  opacity: 0;
+  z-index: 2;
+  @extend .MyriadPro-Regular;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    display: inline-block;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.rotate-l span {
+  transform: translateY(120px) rotate(-90deg);
+  transform-origin: left center;
+}
+
+.rotate-l.arthra-rot span {
+  transform: translateY(50px) rotate(-90deg);
+}
+
+.rotate-l {
+  left: 50px;
+}
+
+.rotate-r {
+  right: 50px;
+
+}
+
+.rotate-r span {
+  transform: translateY(-120px) rotate(-90deg);
+  transform-origin: right center;
+}
+
+.rotate-r.arthra-rot span {
+  transform: translateY(-90px) rotate(-90deg);
+}
+
+/*<p data-text="reproduction.info">reproduction.info</p>*/
+.name-rotate span:before {
+  content: attr(data-text);
+  position: absolute;
+  overflow: hidden;
+  max-width: 20em;
+  white-space: nowrap;
+  color: #3e3c42;
+  @extend .MyriadPro-Regular;
+}
+
+#color-l-sec:before {
+  color: #65616e;
+}
+
+.name-rotate.active {
+  opacity: 1;
+}
+
+.name-rotate.active span::before {
+  -webkit-animation: loading 1.5s linear;
+  animation: loading 1.5s linear;
+}
+
+@keyframes loading {
+  0% {
+    max-width: 0;
+  }
+}
+
+/***********************************************
+  Social Networks
+***********************************************/
+.social_networks {
+  padding-top: 40px;
+  display: none;
+  // padding-right: 50px;
+
+}
+
+.soc-list li {
+  display: inline-block;
+  margin-left: 10px;
+  background-size: contain;
+  width: 33px;
+  height: 33px;
+  opacity: .6;
+  @extend .transition-opacity;
+}
+
+.soc-list li:hover {
+  opacity: 1;
+}
+
+.soc-list li a {
+  display: block;
+  overflow: hidden;
+  @extend .w-h-100;
+  //color: transparent;
+}
+
+.soc-f {
+  background: url("/img/svg-min/soc-f.svg") no-repeat center;
+}
+
+.soc-vk {
+  background: url("/img/svg-min/soc-vk.svg") no-repeat center;
+}
+
+.soc-ok {
+  background: url("/img/svg-min/soc-ok.svg") no-repeat center;
+}
+
+.soc-yu {
+  background: url("/img/svg-min/soc-yu.svg") no-repeat center;
+}
+
+/***********************************************
+IMG Index Drugs //
+***********************************************/
+.wr-in-imr {
+  display: inline-block;
+  position: relative;
+  margin-top: 30px;
+  margin-right: -30px;
+  @include breakpoint($small-min) {
+    margin-right: 0;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    overflow: visible;
+    position: absolute;
+    bottom: -90px;
+    right: -60px;
+    margin-top: 0;
+  }
+  @include breakpoint($large) {
+    bottom: -110px;
+    right: -40px;
+  }
+  @include breakpoint($large-xl) {
+  }
+}
+
+.wr-in-imr.body-sculpture-in {
+  margin-right: 0;
+}
+
+.wr-in-iml {
+  position: relative;
+  display: inline-block;
+  margin-right: -30px;
+  margin-top: 35px;
+  @include breakpoint($small-min) {
+    margin-right: 0;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    position: absolute;
+    bottom: -90px;
+    left: -70px;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  @include breakpoint($large) {
+    bottom: -110px;
+    left: -40px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.img-dr-in-two {
+  max-width: 280px;
+  z-index: 3;
+  transform: translate(10px, 0);
+  @include breakpoint($small-min) {
+    transform: translate(0, 0);
+    max-width: 330px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 350px;
+    max-width: none;
+  }
+  @include breakpoint($large) {
+    width: 390px;
+  }
+  @include breakpoint($large-xl) {
+    max-width: 450px;
+    width: 100%;
+  }
+}
+
+/***********************************************
+BTN Next SVG
+***********************************************/
+.sale-index-dr {
+  position: absolute;
+  display: inline-block;
+  bottom: 110px;
+  left: 0;
+  z-index: 10;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    bottom: 170px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.sale-index-dr.r-pos {
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    right: 0;
+    left: auto;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.btn-circle.buy-svg {
+  width: 50px;
+  height: 50px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    width: 60px;
+    height: 60px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.buy-car {
+  opacity: .75;
+  @extend .transition-opacity;
+}
+
+.btn-circle:hover .buy-car {
+  opacity: 1;
+}
+
+.btn-next-sec-r, .btn-next-sec-l, .btn-next-sec-s {
+  position: absolute;
+  bottom: 180px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  z-index: 5;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    bottom: 240px;
+  }
+  @include breakpoint($large) {
+    width: 60px;
+    height: 60px;
+    bottom: 260px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.btn-next-sec-r {
+  left: 0;
+}
+
+.btn-next-sec-r.body-sculp-next, .sale-index-dr.body-sculp-next {
+  left: -30px;
+  @include breakpoint($small-min) {
+    left: -40px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    left: -50px;
+  }
+  @include breakpoint($large) {
+    left: -60px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.btn-next-sec-l {
+  left: 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    right: 0;
+    left: auto;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.btn-next-sec-s {
+  left: 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    right: 0;
+    left: auto;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.btn-circle {
+  width: 100%;
+  height: auto;
+  // cursor: pointer
+}
+
+.circle {
+  stroke: #fff;
+  opacity: 0.7;
+  stroke-width: 2px;
+  stroke-dasharray: 169.66990661621094;
+  stroke-dashoffset: 169.66990661621094;
+  transform-origin: 50% 50%;
+  animation: dash-up 0.4s linear forwards
+}
+
+.btn-circle:hover .circle {
+  animation: dash 0.6s linear forwards
+}
+
+.btn-circle:hover .arrow-btn {
+  -moz-transform: translate(5px, 0);
+  -ms-transform: translate(5px, 0);
+  -webkit-transform: translate(5px, 0);
+  transform: translate(5px, 0);
+  opacity: 1
+}
+
+.lin-btn {
+  max-width: 130px;
+  @extend .ver-cen-sl;
+}
+
+.arrow-btn {
+  @extend .transition-all;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 169.66990661621094
+  }
+  to {
+    stroke-dashoffset: 0
+  }
+}
+
+@keyframes dash-up {
+  from {
+    stroke-dashoffset: 0
+  }
+  to {
+    stroke-dashoffset: 169.66990661621094
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 0 13px;
+  border: 1px solid;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  @extend .Roboto_Medium;
+  @extend .transition-all;
+
+}
+
+.header-btn {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+  width: 100%;
+
+}
+
+.bl-btn {
+  border: none;
+  background: #3e3f60;
+  color: #fff;
+  width: 100%;
+}
+
+.bl-btn:hover {
+  background: darken(#3e3f60, 10%);
+  // border-color: darken(#3e3f60, 9%);
+}
+
+.header-btn:hover {
+  border-color: rgba(255, 255, 255, 0.20);;
+  background: rgba(255, 255, 255, 0.30);
+}
+
+.wr-btn-hd {
+  display: block;
+  width: 120px;
+  margin: 50px auto 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-drugs .wr-btn-hd {
+  margin-top: 30px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-top: 50px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-btn-hd.sale-btn {
+  width: 130px;
+}
+
+.def-btn {
+  width: 130px;
+  margin: 0 auto;
+}
+
+.def-btn-l {
+  width: 145px;
+  display: inline-block;
+}
+
+/***********************************************
+Section Info
+***********************************************/
+#info-sec, .icon_body_sculpture {
+  background: #f7f7f7;
+}
+
+.icon_body_sculpture {
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    padding-top: 30px;
+  }
+  @include breakpoint($medium) {
+    padding-top: 0;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#info-sec .l-sec-l-r:after, #info-sec .l-sec-l-r::before {
+  background: transparent;
+
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    background: #E16850;
+    top: 85%;
+  }
+  @include breakpoint($large) {
+    top: 75%;
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-txt-info {
+  // padding: 50px 0;
+  z-index: 2;
+  // text-align: center;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+    padding: 100px 0 50px;
+  }
+  @include breakpoint($large) {
+    padding: 150px 0 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-info-logo {
+  text-align: center;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    text-align: right;
+    margin-top: 20px;
+    padding: 0 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.info-logo {
+  display: inline-block;
+  width: 180px;
+  height: auto;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    width: 260px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#info-sec h5 {
+  position: relative;
+  font-weight: normal;
+  display: inline-block;
+  color: $color-txt;
+  font-size: 1em;
+  line-height: 1.5;
+  max-width: 450px;
+  //padding-left: 20px;
+  @extend .MyriadPro-Regular;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding-left: 30px;
+  }
+  @include breakpoint($large) {
+    padding-left: 100px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/*Number*/
+.num-info {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  color: #e8e8e8;
+  opacity: .7;
+  z-index: 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    bottom: 25px;
+  }
+  @include breakpoint($large) {
+    width: auto;
+    text-align: left;
+    bottom: -30px;
+    left: 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.txt-num {
+  font-size: 10em;
+  line-height: 0.8;
+  margin: 0;
+  @extend .HouschkaPro-ExtraBold;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: 15em;
+  }
+  @include breakpoint($large) {
+    font-size: 20em;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Section Body Sculpture
+***********************************************/
+$bg_body_sculpture: #D15F47;
+#body_sculpture {
+  background-color: $bg_body_sculpture;
+  z-index: 2;
+}
+
+.body_sculpture-bg .num-sec {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.body_sculpture-bg {
+  background: url("/img/img-index-drugs/1-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-position: 100px center;
+  height: 100%;
+  // height: calc(100% + 100px);
+  // @include transition(background 5s);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+  }
+}
+
+.body_sculpture-bg::before {
+  content: '';
+  background: rgba(209, 95, 71, 0.7);
+  @extend .p-a-100;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    background: none;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.body_sculpture-bg.active {
+  // background-position: 50px center;
+}
+
+/***********************************************
+Triangle
+***********************************************/
+.wr-triangle {
+  height: 260px;
+}
+
+.triangle-left {
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 260px;
+  border-left-width: 100%;
+  border-color: transparent transparent transparent rgba(66, 69, 83, 0.08);
+  z-index: 2;
+}
+
+.triangle-right, .triangle-right.triangle-right-sm {
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-top-width: 0;
+  border-right-width: 100%;
+  border-bottom-width: 260px;
+  border-left-width: 0;
+  border-color: transparent rgba(66, 69, 83, 0.08) transparent transparent;
+  z-index: 2;
+}
+
+.wr-triangle-sm {
+  height: 160px;
+}
+
+.wr-triangle-sm .triangle-right-sm {
+  border-bottom-width: 160px;
+  z-index: 5;
+}
+
+.wr-triangle-sm .triangle-left-sm {
+  border-bottom-width: 160px;
+  z-index: 5;
+}
+
+/***********************************************
+ Section Energy Power
+***********************************************/
+#energy_power {
+  background-color: #533F72;
+  z-index: 5;
+}
+
+.energy_power-bg {
+  position: relative;
+  background: url("/img/img-index-drugs/2-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+  }
+
+}
+
+.energy_power-bg::before {
+  content: '';
+  background: rgba(83, 63, 114, 0.7);
+  @extend .p-a-100;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    background: none;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Section Isotonic
+***********************************************/
+#isotonic {
+  background: #FDC55F;
+  z-index: 5;
+}
+
+.isotonic-bg {
+  position: relative;
+  background: url("/img/img-index-drugs/3-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+  }
+}
+
+.isotonic-bg::before {
+  content: '';
+  background: rgba(238, 182, 92, 0.7);
+  @extend .p-a-100;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    background: none;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Section Energy Tonic
+***********************************************/
+#energy_tonic {
+  z-index: 5;
+  background: #B44788;
+}
+
+.energy_tonic-bg {
+  position: relative;
+  background: url("/img/img-index-drugs/4-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-repeat: no-repeat;
+  }
+}
+
+.energy_tonic-bg::before {
+  content: '';
+  background: rgba(173, 70, 129, 0.6);
+  @extend .p-a-100;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: transparent;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.block-fot-next {
+  margin-top: 100px;
+}
+
+.svg-sec-ab.sec-fot-next {
+  height: 174px;
+}
+
+/***********************************************
+Section Arthra
+***********************************************/
+#arthra {
+  z-index: 5;
+  background: $arthra;
+
+}
+
+.arthra-bg {
+  position: relative;
+  //background: url("/img/img-index-drugs/5-bg.jpg") no-repeat center;
+  background: url("/img/img-index-drugs/5.1-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+  }
+}
+
+.arthra-bg::before {
+  content: '';
+  @extend .p-a-100;
+  background: rgba(57, 154, 186, 0.7);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: transparent;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+ARTHRO + CURCUMIN
+***********************************************/
+#arthro_curcumin {
+  background: $arthro_curcumin;
+  z-index: 5;
+}
+
+.arthro_curcumin-bg {
+  position: relative;
+  //background: url("/img/img-index-drugs/5-bg.jpg") no-repeat center;
+  background: url("/img/arthra_curcuma/index.jpg") no-repeat center;
+  background-size: cover;
+  height: 100%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+    background-size: contain;
+  }
+}
+
+.arthro_curcumin-bg::before {
+  content: '';
+  @extend .p-a-100;
+  background: rgba(57, 154, 186, 0.7);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: transparent;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/***********************************************
+Line Slogan
+***********************************************/
+#line-slogan {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  height: 450px;
+  width: 100%;
+  background: #fff;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    margin-bottom: 85px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-slogan-foot::after {
+  content: '';
+  @extend .p-a-100;
+  z-index: 1;
+}
+
+.wr-slogan-foot img {
+  display: inline-block;
+  max-height: 100%;
+  width: auto;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    margin-top: 30px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.txt-slogan {
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    top: -40px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.txt-item-slogan {
+  position: relative;
+  display: inline-block;
+  color: #393f51;
+  line-height: 1;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  @extend .HouschkaPro-Bold;
+  @include breakpoint($large) {
+    font-size: 1.7em;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.txt-item-slogan span {
+  //color: #ebb04b;
+  color: #D35D39;
+  // color: #444b60;
+}
+
+.txt-item-slogan::after {
+  background: $color-txt;
+  content: '';
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  width: 1px;
+  height: 45px;
+  background: transparent;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: $color-txt;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.wr-slogan-foot .logo-slogan {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: -60px;
+  display: inline-block;
+  width: 200px;
+  height: auto;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    top: -55px;
+  }
+  @include breakpoint($large) {
+    top: -85px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#line-slogan.l-sec-l-r::after, #line-slogan.l-sec-l-r::before {
+  background: transparent;
+  top: 40%;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    background: #D35D39;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/*.q-l,.q-r{
+  position: absolute;
+}
+.q-l{
+  bottom: -10px;
+  left: 0;
+}
+.q-r{
+  top: -10px;
+  right: 0;
+}
+.txt-item-slogan svg{
+  fill: #3E3D46;
+  width: 20px;
+  height: auto;
+  opacity: .6;
+}*/
+/***********************************************
+Footer
+***********************************************/
+$footer-bg: rgba(42, 45, 64, 1);
+;
+.footer {
+  //height: 250px;
+  height: 200px;
+  // background: #393b45;
+  //margin-top: 50px;
+  background: lighten($footer-bg, 3%);
+
+}
+
+.footer .ver-cen-sl {
+  margin-top: -1%;
+}
+
+.footer-dow {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  left: 0;
+  //background: darken($footer-bg, 3%);
+  // background: darken(#393b45, 3%);
+  background: $footer-bg;
+}
+
+.akvion-link, .redhex {
+  display: inline-block;
+  font-size: .7em;
+  float: left;
+  color: #fff;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  @extend .transition-opacity;
+  @extend .Roboto_Medium;
+}
+
+.akvion-link:hover, .redhex:hover {
+  opacity: 1;
+}
+
+.akvion-link {
+  float: left;
+}
+
+.redhex {
+  float: right;
+}
+
+.akvion-link svg {
+  display: inline-block;
+  width: 13px;
+  height: auto;
+  margin-top: -2px;
+  fill: #fff;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+.social_networks-foot {
+  display: none;
+}
+
+/***********************************************
+Navigation Footer
+***********************************************/
+.wr-ul-foot {
+  margin-top: 20x;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.ul-foot li {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.ul-foot li:not(.last) {
+  margin-right: 25px;
+}
+
+.ul-foot li:not(.last)::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  height: 60%;
+  right: -12px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.30);
+}
+
+.ul-foot li a {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-size: .75em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 3px;
+  line-height: 1;
+  opacity: 0.6;
+  @extend .Roboto_Medium;
+  @extend .transition-all;
+}
+
+.ul-foot li a:hover {
+  opacity: 1;
+}
+
+.ul-foot li a:hover::after {
+  width: 100%;
+}
+
+.ul-foot li a::after {
+  background: rgba(255, 255, 255, 0.55);
+  width: 0;
+  @extend .after-ab-100-1;
+  @extend .transition-all;
+}
+
+/***********************************************
+Demo
+***********************************************/
+/*#wr-demo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: rgba(42, 45, 64, 0.90);
+  z-index: 200;
+  overflow: hidden;
+  @extend .transition-height;
+}
+
+#wr-demo.active {
+  height: 250px;
+}
+
+#wr-demo p {
+  color: #eeeeee;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 1.1em;
+  @extend .MyriadPro-Regular;
+}
+
+#wr-demo .tlt-demo {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+  @extend .Roboto_Medium;
+}
+
+#close-demo {
+  position: absolute;
+  top: -10px;
+  cursor: pointer;
+  right: -30px;
+}
+
+#wr-demo p span {
+  font-size: 1.2em;
+  color: #fff;
+  @extend .HouschkaPro-Bold;
+}
+
+.txt-demo {
+  text-align: left;
+  max-width: 800px;
+  padding: 0 50px;
+}*/
+/***********************************************
+SVG Header All
+***********************************************/
+.wr-svg-hd {
+  margin-top: 30px;
+}
+
+.svg-hd-sec {
+  width: 110px;
+  height: auto;
+  opacity: .8;
+}
+
+/***********************************************
+Animate Section
+***********************************************/
+.anim-block {
+  @include translate(0, 20px);
+  @include transition(all 0.9s ease-in-out);
+
+}
+
+.anim-block.active {
+  @include translate(0, 0);
+}
+
+/***********************************************
+Link Drugs
+***********************************************/
+.wr-aside {
+  padding: 60px 0 50px;
+  background-color: #f6f6f6;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 60px 0 80px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.link-list img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  max-width: 230px;
+
+}
+
+.link-list .item {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.link-list .item a::before {
+  content: '';
+  @extend .p-a-100;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: -1;
+}
+
+.link-list .item a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 35px 0 20px;
+  @extend .w-h-100;
+}
+
+.link-list .item a:hover::after, .link-list .item.open a::after {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.link-list .item a::after {
+  content: '';
+  @extend .p-a-100;
+  background: rgba(255, 255, 255, 0);
+  z-index: 3;
+  @extend .transition-bg;
+}
+
+.check-link {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  z-index: 5;
+  @extend .transition-opacity;
+  @extend .bg-contain;
+}
+
+.link-list .item:hover .check-link, .link-list .item.open .check-link {
+  opacity: 1;
+}
+
+.btn-i {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  margin: -35px 0 0 -25px;
+  background-image: url("/img/svg-min/arrow-link.svg");
+  transform: scale(0.8);
+  opacity: 0;
+  @extend .bg-contain;
+  @extend .transition-all;
+}
+
+.link-list .item a:hover .btn-i {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.link-list .item.open a:hover .btn-i {
+  opacity: 0;
+}
+
+.link-list .item span {
+  text-transform: uppercase;
+  font-size: .85em;
+  color: $color-txt;
+  padding: 0 20px;
+  -moz-osx-font-smoothing: grayscale;
+  @include translate(0, -10px);
+  @extend .Roboto_Medium;
+
+}
+
+.owl-dot {
+  text-align: center;
+  float: left;
+  margin-right: 10px;
+}
+
+.owl-dot span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid $bg_body_sculpture;
+
+}
+
+.owl-dot.active span {
+  background: $bg_body_sculpture;
+}
+
+.owl-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dots {
+  display: inline-block;
+}
+
+/***********************************************
+SVG Header
+***********************************************/
+.op-svg-hd {
+  opacity: .9;
+}
+
+/***********************************************
+checkbox
+***********************************************/
+#filter-questions [type="checkbox"]:not(:checked) + label:after,
+#filter-questions [type="checkbox"]:checked + label:after,
+#filter-questions [type="checkbox"] + label:before {
+  @extend .transition-all;
+}
+
+#filter-questions label, .chec-l p {
+  @extend .Roboto_Medium;
+}
+
+.chec-l p::after {
+  @extend .bg-contain;
+}
+
+/***********************************************
+Смена изображений упаковок
+***********************************************/
+.nav-cl-drug {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -80px;
+  z-index: 10;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-top: 0;
+    margin-left: -82px;
+    top: -100px;
+    left: 50%;
+  }
+  @include breakpoint($large) {
+    top: -110px;
+    margin-left: -95px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.nav-cl-drug .link-change {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  // display: inline-block;
+  // float: left;
+  margin-bottom: 15px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin-bottom: 0;
+    display: inline-block;
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin-right: 25px;
+  }
+  @include breakpoint($large) {
+    width: 80px;
+    height: 80px;
+    margin-right: 30px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.nav-cl-drug .link-change:last-child {
+  margin-right: 0;
+}
+
+.nav-change-product {
+  width: auto;
+  height: 90%;
+  margin: 0;
+}
+
+.img-nav-cl {
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  top: 15%;
+  left: 0;
+}
+
+.nav-cl-drug .btn-circle {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.link-change .btn-circle .circle {
+  stroke: #B2442D;
+  opacity: .7;
+}
+
+.link-change:hover .btn-circle .circle {
+  //stroke: #934029;
+  stroke: #1b171d;
+  opacity: 1;
+}
+
+#ic-3d .btn-circle, #ic-3d .buy-car {
+  opacity: 1;
+}
+
+#ic-3d:hover .btn-circle .circle {
+  stroke: #fff;
+}
+
+#ic-3d .bay-cr {
+  fill: #3a4066;
+}
+
+#ic-3d:hover .bay-cr {
+  fill: darken(#3a4066, 5%);
+}
+
+.nav-cl-drug .btn-circle path {
+  stroke-width: 2;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    stroke-width: 1.3;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.change-product-main {
+  //@include transition(opacity 0.25s);
+  transition: opacity 0.25s, transform 0.3s;
+  transform: scale(1);
+}
+
+.nav-change-product {
+  transition: opacity 0.3s .03s, transform 0.4s;
+  transform: scale(1);
+}
+
+.change-product-main.hide-change-img {
+  opacity: 0;
+  transform: scale(0.99);
+  //@include transition(opacity 0.15s);
+  transition: opacity 0.15s, transform 0.2s;
+}
+
+.nav-change-product.hide-change-img {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/***********************************************
+Carousel 3D
+***********************************************/
+.wr-carousel-3d {
+  //background-color: #cc5d45;
+  // background: #f8f8f8;
+  /* Rectangle 2: */
+  background-image: radial-gradient(48% 150%, #FFFFFF 50%, #F0F0F0 100%);
+  // background-image: radial-gradient(48% 150%, #FFFFFF 50%, rgba(243,243,243,0.90) 100%);
+
+  // background-image: url("/img/body_sculpture_all/slider3D/fon.svg");
+  // @extend .bg-cover;
+}
+
+.wr-carousel-3d::before {
+  content: '';
+  background-image: url("/img/body_sculpture_all/slider3D/bg.jpg");
+  z-index: 1;
+  opacity: 0.03;
+  @extend .bg-cover;
+  @extend .p-a-100;
+}
+
+.container.container-3D {
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding: 0;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.pad-3d {
+  padding: 50px 0 40px;
+  @include breakpoint($small-min) {
+    padding: 50px 0;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    padding: 60px 0;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#showcase {
+  width: 100%;
+  height: 320px;
+  padding: 50px 0;
+  visibility: hidden;
+  position: relative;
+  overflow: visible !important;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    height: 340px;
+  }
+  @include breakpoint($medium) {
+    height: 350px;
+  }
+  @include breakpoint($large) {
+    height: 360px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#showcase img {
+  cursor: pointer;
+  height: auto;
+  max-height: 100%;
+  width: 100%;
+  display: inline-block;
+  z-index: 2;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    //height: 110%;
+    // max-height: 110%;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#item-title {
+  color: #303959;
+  //color: #fff;
+  font-size: 0.7em;
+  text-align: center;
+  margin-top: 25px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-shadow: 0 0 0;
+  display: inline-block;
+  padding: 12px;
+  border-radius: 2px;
+  min-width: 280px;
+  @extend .Roboto_Medium;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+    min-width: auto;
+  }
+  @include breakpoint($medium) {
+    font-size: 0.85em;
+    //margin-top: 30px;
+  }
+  @include breakpoint($large) {
+    margin-top: 40px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+//$bg-tlt-3d: rgba(58, 64, 102, 0.95);
+$bg-fon-3d: #f7f7f7;
+$bg-tlt-3d: #3A4066;
+
+.arrow_box {
+  position: relative;
+  background: $bg-fon-3d;
+  border: 1px solid $bg-tlt-3d;
+}
+
+.arrow_box:after, .arrow_box:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow_box:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: $bg-fon-3d;
+  border-width: 5px;
+  margin-left: -5px;
+}
+
+.arrow_box:before {
+  border-color: rgba(119, 34, 245, 0);
+  border-bottom-color: $bg-tlt-3d;
+  border-width: 6px;
+  margin-left: -6px;
+}
+
+/*BG*/
+.before-3D::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -75px;
+  width: 130px;
+  height: 130px;
+  z-index: 2;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s, transform 0.2s;
+  display: none;
+  @extend .bg-contain;
+  @include breakpoint($small-min) {
+    display: block;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/*.before-3D::after{
+  opacity: 0;
+  transform: scale(0.95);
+  top: 0;
+  right: -25px;
+  width: 60px;
+  height: 60px;
+}*/
+.before-3D.before-3D-sm::before {
+  right: -60px;
+}
+
+#ic-3d {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 20;
+  @include breakpoint($small-min) {
+    top: 25px;
+    right: -50px;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    top: 20px;
+    right: -80px;
+    width: 52px;
+    height: 52px;
+  }
+  @include breakpoint($large) {
+    top: 35px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#ic-3d .buy-svg {
+  width: 100%;
+  height: 100%;
+}
+
+#ic-3d:hover {
+  @include box-shadow-2(0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12));
+}
+
+/*#ic-3d span {
+  width: 100%;
+  height: 100%;
+  // display: inline-block;
+}*/
+
+.measuring-spoon::before {
+  background-image: url("/img/body_sculpture_all/slider3D/spoon.svg");
+}
+
+/*.measuring-spoon::after {
+  background-image: url("/img/body_sculpture_all/slider3D/spoon-ic.svg");
+}*/
+
+.gr300::before {
+  background-image: url("/img/body_sculpture_all/slider3D/gr300.svg");
+}
+
+/*.gr300::after {
+  background-image: url("/img/body_sculpture_all/slider3D/gr300-ic.svg");
+}*/
+
+.spoon::before {
+  background-image: url("/img/body_sculpture_all/slider3D/sachet.svg");
+}
+
+/*.spoon::after {
+  background-image: url("/img/body_sculpture_all/slider3D/sachet-ic.svg");
+}*/
+
+.active3D .before-3D::before {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.cloud9-item {
+  height: 100%;
+  width: auto;
+  text-align: center;
+  opacity: .3;
+  // @include transition(opacity 0.2s);
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    opacity: 1;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.cloud9-item.active3D {
+  opacity: 1;
+}
+
+/*.active3D .before-3D::after{
+  opacity: 1;
+  transform: scale(1);
+}*/
+/*Blur*/
+/*img.blur {
+  -webkit-filter: url(#blur);
+  filter: url(#blur);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+  -webkit-transition: 1s -webkit-filter linear;
+  transition: 1s filter linear;
+}
+img.blur:hover {
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+}*/
+
+.nav-3d {
+  display: none;
+  text-align: center;
+}
+
+.nav-3d_button {
+  cursor: pointer;
+}
+
+$bg-btn-3d: #3a4066;
+//#3a4066
+.nav-3d_button {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  margin-top: -22px;
+  width: 44px;
+  height: 44px;
+  box-shadow: none;
+  text-shadow: none;
+  background: $bg-btn-3d;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 2px;
+  border: 1px solid $bg-btn-3d;
+  @extend .transition-all;
+}
+
+.nav-3d_button:hover {
+  background: darken($bg-btn-3d, 10%);
+  @include box-shadow-2(0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12));
+}
+
+.nav-3d-left {
+  left: 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    left: 40px;
+  }
+  @include breakpoint($large) {
+    left: 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.nav-3d-right {
+  right: 0;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    right: 40px;
+  }
+  @include breakpoint($large) {
+    right: 50px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.nav-3d_button.down {
+  background: #dfdfdf;
+  border: solid 2px rgba(0, 0, 0, 0.6);
+  box-shadow: none;
+}
+
+.wr-item-pac {
+  height: 100%;
+  width: 300px;
+  position: relative;
+  z-index: 2;
+  /* background-image: url("/img/body_sculpture_all/fon.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;*/
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 350px;
+  }
+  @include breakpoint($large) {
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.l-sec-l-r.l-sec-l-r-3d::after, .l-sec-l-r.l-sec-l-r-3d::before {
+  background: #cc5d45;
+}
+
+/*
+.wr-item-pac::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 110%;
+  background-image: url("/img/body_sculpture_all/fon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}*/
+/***********************************************
+
+***********************************************/
+.ripple {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate(0);
+}
+
+.effekt {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: scale(0);
+  z-index: 0;
+  background: rgba(58, 64, 102, 0.4);
+  opacity: 1;
+  width: 160px;
+  height: 160px;
+  top: 50%;
+  left: 50%;
+  margin-left: -80px;
+  margin-top: -80px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    display: block;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.effekt.replay {
+  animation: ripple 2s cubic-bezier(0.165, 0.85, 0.45, 1) 3;
+}
+
+.effekt.replay.effekt-first {
+  animation: ripple 2s .5s cubic-bezier(0.165, 0.85, 0.45, 1) 3;
+}
+
+.active3D .effekt.replay {
+  animation: none;
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+  }
+}
+
+/*
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+  }
+}
+@-moz-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+  }
+}
+@-ms-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+  }
+}
+@-o-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+  }
+}*/
+/***********************************************
+CSS Tooltips
+***********************************************/
+$bg-tooltip: rgba(49, 52, 68, 0.7);
+a.tooltips {
+  position: relative;
+  display: inline;
+  @extend .MyriadPro-Regular;
+  @extend .easy-txt;
+  // @extend .transition-all;
+}
+
+a.tooltips span {
+  position: absolute;
+  width: 158px;
+  color: #FFFFFF;
+  background: $bg-tooltip;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  // visibility: hidden;
+  border-radius: 4px;
+  font-size: 0.9em;
+  opacity: 0;
+  top: 40px;
+  left: 50%;
+  margin-left: -79px;
+  @extend .transition-all;
+}
+
+#ic-3d span {
+  top: 75px;
+}
+
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -6px;
+  width: 0;
+  height: 0;
+  border-bottom: 6px solid $bg-tooltip;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+a:hover.tooltips span {
+  //visibility: visible;
+  opacity: 1;
+  top: 30px;
+  z-index: 999;
+
+}
+
+#ic-3d:hover span {
+  top: 65px;
+}
+
+/***********************************************
+BTN Sale
+***********************************************/
+.wr-group-btn {
+  height: 45px;
+  width: 200px;
+  margin: 30px auto 0;
+  vertical-align: middle;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    margin: 40px auto 0;
+  }
+  @include breakpoint($large) {
+    margin: 50px auto 0;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.sale-on {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  float: left;
+  margin-top: -3px;
+}
+
+.sale-on svg {
+  width: 100%;
+  height: auto;
+}
+
+.sale-btn-gr {
+  width: 135px;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+
+.c-sale-svg {
+  fill: #fff;
+  fill-opacity: 0;
+  @extend .transition-all;
+}
+
+.sale-on a:hover .c-sale-svg {
+  fill-opacity: 0.5;
+}
+
+/***********************************************
+СОГЛАСИЕ посетителя сайта на обработку персональных данных
+***********************************************/
+$bg-visit: #494c6c;
+$font-visit: "MyriadPro-Regular", sans-serif;
+$font-visit-tlt: 'BebasNeueBold';
+$color-visit: #5b5d67;
+$bg-send-bt: #494c6c;
+.note-form-top {
+  text-align: left;
+}
+
+#remodal-visitor {
+  padding: 20px 20px 20px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    padding: 30px 30px 25px;
+  }
+  @include breakpoint($large) {
+    padding: 30px 40px 25px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.logo-interview {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 20px;
+  top: 20px;
+}
+
+.logo-interview img {
+  width: 100%;
+  height: auto;
+}
+
+#consent-visitor {
+  margin-bottom: 20px;
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#consent-visitor a.bt-pos-vis {
+  vertical-align: middle;
+  color: $color-visit;
+  font-size: .9em;
+  position: absolute;
+  left: 27px;
+  top: 1px;
+  text-decoration: underline;
+  display: block;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  z-index: 30;
+  font-weight: 400;
+  // pointer-events: none;
+  font-family: $font-visit;
+  @include breakpoint($small-min) {
+    // font-size: 0.9em;
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    font-size: 0.95em;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+/*#consent-visitor a.bt-pos-vis:visited,#consent-visitor a.bt-pos-vis:hover,#consent-visitor a.bt-pos-vis:active{
+  color: $color-visit;
+}*/
+#consent-visitor a.bt-pos-vis i {
+  display: inline-block;
+  vertical-align: middle;
+  color: #ed7c7f;
+}
+
+#consent-visitor span {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  transform-origin: center;
+  border: 1px solid #b5b5b5;
+  border-radius: 2px;
+  vertical-align: -4px;
+  // margin-right: 8px;
+  //transition: background-color 150ms 200ms, transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+  transition: all 350ms;
+  clear: both;
+}
+
+#consent-visitor input[type="checkbox"]:hover + span, #consent-visitor input[type="radio"]:hover + span {
+  border-color: #787878;
+}
+
+#consent-visitor span:before {
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: $bg-visit;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 7px;
+  left: 3px;
+  transition: width 50ms ease 50ms;
+  transform-origin: 0 0;
+}
+
+#consent-visitor span:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: $bg-visit;
+  position: absolute;
+  transform: rotate(305deg);
+  top: 12px;
+  left: 5px;
+  transition: width 50ms ease;
+  transform-origin: 0 0;
+}
+
+/*label:hover span:before {
+  width: 5px;
+  transition: width 100ms ease;
+}
+label:hover span:after {
+  width: 10px;
+  transition: width 150ms ease 100ms;
+}*/
+
+#consent-visitor input[type="checkbox"], #consent-visitor input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 100%;
+  z-index: 3;
+  padding: 0;
+  margin: 0;
+  //display: none;
+  cursor: pointer;
+}
+
+#consent-visitor input[type="checkbox"]:checked + span, #consent-visitor input[type="radio"]:checked + span,
+#consent-visitor input[type="checkbox"].active + span {
+  background-color: $bg-visit;
+  border-color: $bg-visit;
+  //transform: scale(1.25);
+}
+
+#consent-visitor input[type="checkbox"]:checked + span:after, #consent-visitor input[type="radio"]:checked + span:after,
+#consent-visitor input[type="checkbox"].active + span:after {
+  width: 11px;
+  background: #fff;
+  transition: width 150ms ease 100ms;
+}
+
+#consent-visitor input[type="checkbox"]:checked + span:before, #consent-visitor input[type="radio"]:checked + span:before,
+#consent-visitor input[type="checkbox"].active + span:before {
+  width: 6px;
+  background: #fff;
+  transition: width 150ms ease 100ms;
+}
+
+/*.wr-visit-btn{
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+.remodal-confirm-in-r{
+  background: #fff;
+}
+.remodal-cancel-in-l{
+  //background: $bg-send-bt;
+}
+.remodal-confirm-in-r{
+  background: $bg-send-bt;
+}
+.remodal-confirm-in-r:hover{
+  background: darken($bg-send-bt ,3%);
+}*/
+
+.wr-visit-btn {
+  text-align: center;
+  margin-top: 15px;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 30px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+  }
+  @include breakpoint($large) {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+.remodal-cancel-in-l, .remodal-confirm-in-r {
+  float: left;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: .7em;
+  letter-spacing: .5px;
+  display: inline-block;
+  padding: 15px 30px;
+  font-family: Roboto Medium, sans-serif;
+}
+
+.remodal-cancel-in-l {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: #e4e4e4;
+  color: #2b2b37;
+}
+
+.remodal-cancel-in-l:hover {
+  background: darken(#e4e4e4, 6%);
+}
+
+.remodal-confirm-in-r {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  background: $bg-send-bt;
+  color: #fff;
+}
+
+.remodal-confirm-in-r:hover {
+  background: darken($bg-send-bt, 5%);
+}
+
+.logo-interview {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+    width: 40px;
+    height: 40px;
+    right: 25px;
+    top: 25px;
+  }
+  @include breakpoint($large) {
+
+  }
+  @include breakpoint($large-xl) {
+
+  }
+}
+
+#remodal-visitor .remodal-cancel, #remodal-visitor .remodal-confirm {
+  display: inline-block;
+  overflow: visible;
+  min-width: 110px;
+  margin: 0;
+  padding: 15px 32px;
+  cursor: pointer;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+}
+
+/*
+.tlt-visitor {
+  margin-top: 35px;
+  margin-bottom: 25px;
+  font-size: 1.15em;
+  color: #3c3e4b;
+  font-family: "Roboto-Medium", sans-seri;
+  @include breakpoint($small-min) {
+
+  }
+  @include breakpoint($small) {
+
+  }
+  @include breakpoint($medium) {
+
+  }
+  @include breakpoint($large) {
+    font-size: 1.3em;
+  }
+  @include breakpoint($large-xl) {
+    font-size: 1.4em;
+  }
+}*/
+
