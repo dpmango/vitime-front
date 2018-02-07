@@ -26,6 +26,7 @@
     "gulp-uglify": "^1.5.3"
   },
   "dependencies": {
+    "gulp-compass": "^2.1.0",
     "gulp-sass": "^3.1.0",
     "serve-static": "^1.13.1"
   }
