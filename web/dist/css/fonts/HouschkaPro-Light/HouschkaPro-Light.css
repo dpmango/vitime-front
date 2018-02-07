@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "false";
+    src: url("HouschkaPro-Light.eot");
+    src: url("HouschkaPro-Light.eot?#iefix") format("embedded-opentype"),
+         url("HouschkaPro-Light.woff") format("woff"),
+         url("HouschkaPro-Light.ttf") format("truetype"),
+         url("HouschkaPro-Light.svg#false") format("svg");
+    font-weight: false;
+    font-style: false;
+}

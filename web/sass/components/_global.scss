@@ -852,6 +852,7 @@ Index TXT Slider
   }
   @include breakpoint($large) {
     font-size: 2.5em;
+    display: none;
   }
   @include breakpoint($large-xl) {
 
@@ -4315,4 +4316,3 @@ label:hover span:after {
     font-size: 1.4em;
   }
 }*/
-

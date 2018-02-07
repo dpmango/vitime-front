@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "false";
+    src: url("HouschkaPro-ExtraBold.eot");
+    src: url("HouschkaPro-ExtraBold.eot?#iefix") format("embedded-opentype"),
+         url("HouschkaPro-ExtraBold.woff") format("woff"),
+         url("HouschkaPro-ExtraBold.ttf") format("truetype"),
+         url("HouschkaPro-ExtraBold.svg#false") format("svg");
+    font-weight: false;
+    font-style: false;
+}

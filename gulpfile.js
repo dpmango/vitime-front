@@ -11,7 +11,7 @@ var fontgen = require('gulp-fontgen');
 var tinypng = require('gulp-tinypng-compress');
 var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
-
+var sass = require('gulp-sass');
 
 //Setting Project
 var pathProject = 'stopsrach';
@@ -20,10 +20,13 @@ var pathProject = 'stopsrach';
 var browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 
-
-
 gulp.task('styles', function () {
-    return gulp.src('web/css/style.css')
+    return gulp.src('web/sass/*.scss')
+        .pipe(sass({
+            outputStyle: config.production ? 'compact' : 'expanded', // nested, expanded, compact, compressed
+            precision: 5,
+            includePaths : ['web/sass']
+        }))
         .pipe(plumber())
        // .pipe(sourcemaps.init())
         .pipe(autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
@@ -41,15 +44,30 @@ gulp.task('default', ['serve']);
  ***********************************************/
 gulp.task('serve', ['styles'], function() {
 
+    // browserSync.init({
+    //     proxy: "http://vitime.akvion/"
+    // });
     browserSync.init({
-        proxy: "http://vitime.akvion/"
-    });
-    gulp.watch("web/css/*.css",['styles']);
+      proxy: 'https://dev.vitime.pro/produkty/antioxidants/',
+      files: ['web/dist/css/' + '*.css'],
+      middleware: require('serve-static')('./web/dist'),
+      rewriteRules: [
+        {
+          match: new RegExp('</head>'),
+          fn: function(){
+            return '<script async="" src="/browser-sync/browser-sync-client.js?v=2.18.13"></script><link rel="stylesheet" type="text/css" href="http://localhost:8080/css/style.css">'
+          }
+        }
+      ],
+      port: 8080
+    })
+
+    gulp.watch("web/sass/*.scss",['styles']);
     gulp.watch("web/img/svg/*.svg",['svg']);
     gulp.watch("web/js/app.js",['script:app']);
     gulp.watch("web/js/index.js",['script:index']);
     gulp.watch("web/js/*.js").on('change', reload);
-    gulp.watch("web/css/*.css").on('change', reload);
+    gulp.watch("web/dist/css/*.css").on('change', reload);
     gulp.watch("views/**/*.php").on('change', reload);
 });
 /***********************************************
